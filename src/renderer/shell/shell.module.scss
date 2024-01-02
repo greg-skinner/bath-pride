@@ -1,0 +1,41 @@
+@use '@theme/theme.scss';
+@use '@theme/mixins.scss';
+
+.shell {
+  display: grid;
+
+  @include mixins.desktop {
+    grid-template-areas: 'header header' 'menu page' 'footer footer';
+    grid-template-columns: 1fr 4fr;
+  }
+
+  @include mixins.mobile {
+    grid-template-areas: 'header' 'page' 'footer';
+    grid-template-columns: 1fr;
+  }
+
+  grid-template-rows: auto 1fr 2rem;
+  min-height: 100dvh;
+
+  .header {
+    grid-area: header;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+
+  .menu {
+    grid-area: menu;
+
+    @include mixins.mobile {
+      display: none;
+    }
+  }
+
+  .page {
+    grid-area: page;
+    background: theme.$yellow;
+    padding: theme.$spacing-small;
+  }
+}

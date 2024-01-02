@@ -1,0 +1,9 @@
+coverage/**
+test/**
+node_modules/**
+*.aseprite
+
+www/**
+
+.node-version
+tools/api-key
