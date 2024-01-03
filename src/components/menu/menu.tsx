@@ -21,7 +21,7 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
         case 'Blog':
           return (
             <React.Fragment key={pageMap[key]}>
-              <Link href={`/${pageMap[key]}`}>{key}</Link>
+              <Link href={`${pageMap[key]}`}>{key}</Link>
               <br />
               {pageProps?.blog && (
                 <ul>
@@ -37,7 +37,7 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
         default:
           return (
             <React.Fragment key={pageMap[key]}>
-              <Link href={`/${pageMap[key]}`}>{key}</Link>
+              <Link href={`${pageMap[key]}`}>{key}</Link>
               <br />
             </React.Fragment>
           );

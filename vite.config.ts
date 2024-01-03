@@ -9,7 +9,7 @@ const commitHash = require('child_process')
 
 export default ({ mode }) => {
   const isDevelopment = mode === 'development';
-  const base = isDevelopment ? '/' : '/website/';
+  const base = isDevelopment ? '/' : '/bath-pride/';
   return defineConfig({
     base,
     root: 'src',
@@ -62,7 +62,7 @@ export default ({ mode }) => {
     },
 
     server: {
-      port: 3077,
+      port: 3069,
       fs: {
         // Allow serving files from one level up to the project root
         allow: ['..'],
