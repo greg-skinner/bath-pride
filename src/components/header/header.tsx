@@ -9,14 +9,12 @@ import classNames from 'classnames';
 export interface IHeaderProps {
   className?: string;
   icon?: string;
-  title: string;
   pageProps?: PageProps;
 }
 
 export const Header: React.FC<IHeaderProps> = ({
   className,
   icon,
-  title,
   pageProps,
 }) => {
   const [showMenu, setShowMenu] = React.useState(false);
@@ -42,14 +40,8 @@ export const Header: React.FC<IHeaderProps> = ({
       {icon && (
         <img className={styles.icon} src={`${APP_CONFIG.BASE_URL}${icon}`} />
       )}
-      <div className={styles.title}>{title}</div>
-      <div className={styles.options}>
-        <div>Events</div>
-        <div>Other</div>
-      </div>
-      <button onClick={hamburger} className={styles.hamburger}>
-        {'\u276E'}
-      </button>
+      <Menu className={styles.options} />
+      <button onClick={hamburger} className={styles.hamburger}>︙</button>
       <div data-show={showMenu ? 'true' : 'false'} className={styles.container}>
         <div className={styles.dismiss} onClick={hamburger} />
         <Menu

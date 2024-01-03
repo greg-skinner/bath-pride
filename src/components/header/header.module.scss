@@ -1,11 +1,14 @@
+@use '@theme/theme';
 @use '@theme/mixins';
 
 .header {
-  background: pink;
+  background: theme.$stone;
   display: grid;
-  grid-template: 'icon title hamburger' 'icon options hamburger';
+  grid-template: 'icon options hamburger';
+  grid-template-columns: auto 1fr auto;
   grid-auto-flow: column;
   overflow-y: hidden;
+  font-size: theme.$font-header;
 
   @include mixins.mobile {
     grid-template: 'icon title hamburger';
@@ -13,15 +16,13 @@
 
   .icon {
     grid-area: icon;
-  }
-
-  .title {
-    grid-area: title;
+    @include mixins.logo;
   }
 
   .options {
     grid-area: options;
-    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
     @include mixins.mobile {
       display: none;
@@ -31,6 +32,9 @@
   .hamburger {
     grid-area: hamburger;
     justify-self: flex-end;
+    @include mixins.title;
+    font-size: theme.$font-extra-large;
+    padding-right: theme.$spacing-small;
 
     @include mixins.desktop {
       display: none;
@@ -62,6 +66,7 @@
     height: 100dvh;
     left: 100dvw;
     transition: left 0.2s ease-in-out;
+    flex-direction: column;
 
     &[data-slide='true'] {
       left: 20dvw;

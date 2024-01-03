@@ -1,14 +1,40 @@
 @use 'sass:color';
 
 $white: white;
-$yellow: yellow;
+$stone: #f0e7df;
+$text: #252526;
+$red: #ce2624;
+$orange: #ec681c;
+$yellow: #fbba0c;
+$green: #5ca531;
+$darkblue: #3057a4;
+$purple: #942d88;
+$brown: #773D13;
+$lightblue: #44bdd9;
+$pink: #e66fa0;
+
+$accents: (
+  0: $red,
+  1: $orange, 
+  2: $yellow, 
+  3: $green, 
+  4: $darkblue, 
+  5: $purple, 
+  6: $brown, 
+  7: $lightblue, 
+  8: $pink
+);
+
 $mono-bg: khaki;
 $mono-border: color.adjust($mono-bg, $lightness: -30%);
 
 // Fonts
-$font-header: 1.2rem;
-$font-smaller: 0.9rem;
+$font-extra-large: 1.5rem;
+$font-header: 1.25rem;
+$font-smaller: 0.75rem;
+$extra-bold: 800;
 
 // Spacings
-$spacing-small: 0.75rem;
+$spacing-large: 1.5rem;
+$spacing-small: 0.85rem;
 $spacing-smaller: 0.25rem;

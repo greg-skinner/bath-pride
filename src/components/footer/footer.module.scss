@@ -1,6 +1,12 @@
+@use '@theme/theme';
+@use '@theme/mixins';
+
 .footer {
-  background: seagreen;
+  background: theme.$stone;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  padding: theme.$spacing-smaller;
+  font-size: theme.$font-smaller;
 }

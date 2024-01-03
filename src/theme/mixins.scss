@@ -21,3 +21,14 @@ $mobile-breakpoint: 900px;
   border-radius: 3px;
   padding: 0 2px;
 }
+
+@mixin logo {
+  max-height: 6rem;
+  max-width: 6rem;
+  margin: 0.5rem;
+}
+
+@mixin title {
+  font-size: theme.$font-header;
+  font-weight: theme.$extra-bold;
+}

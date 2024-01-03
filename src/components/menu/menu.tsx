@@ -22,7 +22,6 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
           return (
             <React.Fragment key={pageMap[key]}>
               <Link href={`${pageMap[key]}`}>{key}</Link>
-              <br />
               {pageProps?.blog && (
                 <ul>
                   {blogs.map((blog) => (
@@ -38,7 +37,6 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
           return (
             <React.Fragment key={pageMap[key]}>
               <Link href={`${pageMap[key]}`}>{key}</Link>
-              <br />
             </React.Fragment>
           );
       }
@@ -46,8 +44,8 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
 
     return (
       <div ref={ref} className={classNames(className, styles.menu)} {...rest}>
-        <div className={styles.header}>
-          {closeFunc && <button onClick={closeFunc}>X</button>}
+        <div className={styles.button}>
+          {closeFunc && <button onClick={closeFunc}>🞫</button>}
         </div>
         {Object.keys(pageMap)
           .filter((key) => key.search('@') < 0)

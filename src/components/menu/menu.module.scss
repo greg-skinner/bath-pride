@@ -1,11 +1,15 @@
+@use '@theme/theme';
+@use '@theme/mixins';
+
 .menu {
-  background: orange;
+  display: flex;
+  background: theme.$stone;
+  gap: theme.$spacing-small;
+  @include mixins.title;
+  padding: theme.$spacing-small;
 
-  .header {
-    display: grid;
-
-    button {
-      justify-self: flex-end;
-    }
+  .button {
+    align-self: flex-end;
+    padding-right: theme.$spacing-large;
   }
 }

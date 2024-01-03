@@ -17,11 +17,9 @@ export const Shell: React.FC<IShellProps> = ({ children, pageContext }) => (
   <div className={styles.shell}>
     <Header
       className={styles.header}
-      title={'Bath Pride'}
-      icon={'images/logo.png'}
+      icon={'images/logo_white.png'}
       pageProps={pageContext.pageProps}
     />
-    <Menu className={styles.menu} pageProps={pageContext.pageProps} />
     <div className={styles.page}>{children}</div>
     <Footer className={styles.footer} msg={'footer'} />
   </div>
