@@ -32,8 +32,10 @@
   .hamburger {
     grid-area: hamburger;
     justify-self: flex-end;
+    align-self: flex-start;
     @include mixins.title;
     font-size: theme.$font-extra-large;
+    padding-top: theme.$spacing-small;
     padding-right: theme.$spacing-small;
 
     @include mixins.desktop {
@@ -60,16 +62,17 @@
 
   .menu {
     position: fixed;
-    width: 80dvw;
+    width: 70dvw;
+    max-width: 20rem;
     top: 0;
     bottom: 0;
     height: 100dvh;
-    left: 100dvw;
-    transition: left 0.2s ease-in-out;
+    right: -70dvw;
+    transition: right 0.2s ease-in-out;
     flex-direction: column;
 
     &[data-slide='true'] {
-      left: 20dvw;
+      right: 0dvw;
     }
   }
 }

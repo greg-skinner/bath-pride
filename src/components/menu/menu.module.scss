@@ -7,9 +7,9 @@
   gap: theme.$spacing-small;
   @include mixins.title;
   padding: theme.$spacing-small;
+  padding-left: theme.$spacing-large;
 
   .button {
     align-self: flex-end;
-    padding-right: theme.$spacing-large;
   }
 }
