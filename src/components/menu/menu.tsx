@@ -5,6 +5,7 @@ import { blogs, blogSlug, pageMap } from '@utils';
 
 import styles from './menu.module.scss';
 import classNames from 'classnames';
+import { Link } from '@components/link/link';
 
 export interface IMenuProps {
   className?: string;
@@ -20,13 +21,13 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
         case 'Blog':
           return (
             <React.Fragment key={pageMap[key]}>
-              <a href={`/${pageMap[key]}`}>{key}</a>
+              <Link href={`/${pageMap[key]}`}>{key}</Link>
               <br />
               {pageProps?.blog && (
                 <ul>
                   {blogs.map((blog) => (
                     <li key={blog.date + blog.title}>
-                      <a href={`/blog/${blogSlug(blog)}`}>{blog.title}</a>
+                      <Link href={`blog/${blogSlug(blog)}`}>{blog.title}</Link>
                     </li>
                   ))}
                 </ul>
@@ -36,7 +37,7 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
         default:
           return (
             <React.Fragment key={pageMap[key]}>
-              <a href={`/${pageMap[key]}`}>{key}</a>
+              <Link href={`/${pageMap[key]}`}>{key}</Link>
               <br />
             </React.Fragment>
           );
