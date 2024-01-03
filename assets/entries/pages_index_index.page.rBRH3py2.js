@@ -1,1 +1,0 @@
-import{j as e}from"../chunks/chunk-HO-kUAl9.js";import{s as o}from"../chunks/chunk-h0Zfbhqt.js";const t=()=>(console.log("index"),e.jsx("div",{className:o.content,children:"Bath Pride home page"})),n=Object.freeze(Object.defineProperty({__proto__:null,Page:t},Symbol.toStringTag,{value:"Module"}));export{n as _};
