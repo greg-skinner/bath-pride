@@ -7,3 +7,9 @@ export const Page: React.FC = () => {
 
   return <div className={styles.content}>Bath Pride home page</div>;
 };
+
+
+export const documentProps = {
+  title: '',
+  description: '',
+};
