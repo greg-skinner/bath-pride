@@ -8,8 +8,6 @@ import { blogs, blogSlug } from '@utils';
 import { PageContextBuiltIn } from 'vike';
 
 export const Page = ({ blog }: { blog: IBlog }) => {
-  console.log('blog contents:', blog);
-
   if (blog.type === 'standard') {
     return (
       <StandardPage

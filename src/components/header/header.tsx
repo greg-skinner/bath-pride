@@ -41,7 +41,9 @@ export const Header: React.FC<IHeaderProps> = ({
         <img className={styles.icon} src={`${APP_CONFIG.BASE_URL}${icon}`} />
       )}
       <Menu className={styles.options} />
-      <button onClick={hamburger} className={styles.hamburger}>︙</button>
+      <button onClick={hamburger} className={styles.hamburger}>
+        ︙
+      </button>
       <div data-show={showMenu ? 'true' : 'false'} className={styles.container}>
         <div className={styles.dismiss} onClick={hamburger} />
         <Menu

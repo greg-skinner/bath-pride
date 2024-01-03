@@ -16,6 +16,7 @@
 
   .icon {
     grid-area: icon;
+
     @include mixins.logo;
   }
 
@@ -31,9 +32,10 @@
 
   .hamburger {
     grid-area: hamburger;
-    justify-self: flex-end;
-    align-self: flex-start;
+    place-self: flex-start flex-end;
+
     @include mixins.title;
+
     font-size: theme.$font-extra-large;
     padding-top: theme.$spacing-small;
     padding-right: theme.$spacing-small;
@@ -72,7 +74,7 @@
     flex-direction: column;
 
     &[data-slide='true'] {
-      right: 0dvw;
+      right: 0;
     }
   }
 }

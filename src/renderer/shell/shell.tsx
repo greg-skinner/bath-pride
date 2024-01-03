@@ -4,7 +4,6 @@ import 'normalize.css';
 
 import { Footer } from '@components/footer/footer';
 import { Header } from '@components/header';
-import { Menu } from '@components/menu';
 import { PageContext } from '@renderer/types';
 
 import styles from './shell.module.scss';

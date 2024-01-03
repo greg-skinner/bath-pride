@@ -1,11 +1,11 @@
 import * as React from 'react';
 
+import { Link } from '@components/link/link';
 import { PageProps } from '@renderer/types';
 import { blogs, blogSlug, pageMap } from '@utils';
 
 import styles from './menu.module.scss';
 import classNames from 'classnames';
-import { Link } from '@components/link/link';
 
 export interface IMenuProps {
   className?: string;
@@ -15,7 +15,6 @@ export interface IMenuProps {
 
 export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
   ({ className, closeFunc, pageProps, ...rest }, ref) => {
-    console.log('menu content', pageMap, pageProps?.blog);
     const render = (key: string) => {
       switch (key) {
         case 'Blog':

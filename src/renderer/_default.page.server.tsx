@@ -28,8 +28,9 @@ export const render = async (pageContext: PageContextServer) => {
 
   // See https://vike.dev.com/head
   const { documentProps, getDocumentProps } = pageContext.exports;
-  const getTitle = (pageProps && getDocumentProps?.(pageProps).title) || documentProps?.title
-  const title = `${ getTitle ? `${getTitle} - ` : '' }Bath Pride`;
+  const getTitle =
+    (pageProps && getDocumentProps?.(pageProps).title) || documentProps?.title;
+  const title = `${getTitle ? `${getTitle} - ` : ''}Bath Pride`;
 
   const desc =
     (documentProps && documentProps.description) || 'App using Vite + Vike';
