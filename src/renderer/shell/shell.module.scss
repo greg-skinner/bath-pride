@@ -35,6 +35,10 @@
 
   .page {
     grid-area: page;
-    padding: theme.$spacing-small;
+    max-width: mixins.$mobile-breakpoint;
+
+    @include mixins.desktop {
+      padding: theme.$spacing-small;
+    }
   }
 }

@@ -1,0 +1,43 @@
+@use '@theme/theme';
+@use '@theme/mixins';
+
+.banner {
+  display: block;
+  height: 350px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  color: theme.$text;
+
+  @include mixins.mobile {
+    max-height: 60dvw;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .headline {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 50%;
+    font-size: theme.$font-header;
+  }
+
+  .copy {
+    position: absolute;
+    top: calc(20% + 2rem);
+    left: 50%;
+    width: 50%;
+    font-size: theme.$font-smaller;
+    font-weight: theme.$extra-light;
+  }
+
+  &.dark > div {
+    color: theme.$white;
+    filter: drop-shadow(1px 1px 0px theme.$text);
+  }
+}

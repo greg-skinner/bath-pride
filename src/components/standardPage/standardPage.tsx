@@ -60,8 +60,9 @@ export const StandardPage: React.FC<IStandardPageProps> = ({
           {images[index] && (
             <Image
               className={classNames(styles.image)}
-              image={images[index]}
+              dataLine={images[index]}
               cssVar={createCssVars(index)}
+              folder="news"
             />
           )}
         </React.Fragment>

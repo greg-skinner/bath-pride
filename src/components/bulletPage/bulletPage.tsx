@@ -40,8 +40,9 @@ export const BulletPage: React.FC<IBulletPageProps> = ({
           {images[index] && (
             <Image
               className={classNames(styles.image)}
-              image={images[index]}
+              dataLine={images[index]}
               cssVar={{ '--grid-row': String(index + 2) }}
+              folder="news"
             />
           )}
           <RenderText

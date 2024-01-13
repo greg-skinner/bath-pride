@@ -9,19 +9,19 @@ $yellow: #fbba0c;
 $green: #5ca531;
 $darkblue: #3057a4;
 $purple: #942d88;
-$brown: #773D13;
+$brown: #773d13;
 $lightblue: #44bdd9;
 $pink: #e66fa0;
 $accents: (
   0: $red,
-  1: $orange, 
-  2: $yellow, 
-  3: $green, 
-  4: $darkblue, 
-  5: $purple, 
-  6: $brown, 
-  7: $lightblue, 
-  8: $pink
+  1: $orange,
+  2: $yellow,
+  3: $green,
+  4: $darkblue,
+  5: $purple,
+  6: $brown,
+  7: $lightblue,
+  8: $pink,
 );
 $mono-bg: khaki;
 $mono-border: color.adjust($mono-bg, $lightness: -30%);
@@ -31,6 +31,7 @@ $font-extra-large: 1.5rem;
 $font-header: 1.25rem;
 $font-smaller: 0.75rem;
 $extra-bold: 800;
+$extra-light: 100;
 
 // Spacings
 $spacing-large: 1.5rem;

@@ -5,18 +5,24 @@ import classNames from 'classnames';
 
 export interface IImageProps {
   className?: string;
-  image: string;
   cssVar: { [index: string]: string };
+  dataLine: string;
+  folder: string;
 }
 
-export const Image: React.FC<IImageProps> = ({ className, cssVar, image }) => {
-  const regex = image.match(/@(.*?):(.*?):(.*)/);
+export const Image: React.FC<IImageProps> = ({
+  className,
+  cssVar,
+  dataLine,
+  folder,
+}) => {
+  const regex = dataLine.match(/@(.*?):(.*?):(.*)/);
   if (regex !== null) {
     const [, file, caption, alt] = regex;
 
     return (
       <div className={classNames(className, styles.content)} style={cssVar}>
-        <img src={`${APP_CONFIG.BASE_URL}blog/${file}`} alt={alt} />
+        <img src={`${APP_CONFIG.BASE_URL}${folder}/${file}`} alt={alt} />
         <label>{caption}</label>
       </div>
     );
