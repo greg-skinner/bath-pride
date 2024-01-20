@@ -1,0 +1,76 @@
+@use '@theme/theme';
+@use '@theme/mixins';
+@use 'sass:map';
+
+.carousel {
+  @include mixins.banner();
+
+  @include mixins.mobile {
+    max-height: 38dvh;
+    height: 100%;
+  }
+  overflow: hidden;
+
+  .carousel-page {
+    width: 100%;
+    color: theme.$white;
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+
+    @include mixins.mobile {
+      height: 38dvh;
+    }
+
+    @each $index, $colour in theme.$accents {
+      &[data-index='#{$index}'] {
+        .header {
+          background: map.get(theme.$accents, ($index * 2) % 9);
+        }
+        .description {
+          background: map.get(theme.$accents, ($index * 2 + 1) % 9);
+        }
+      }
+    }
+
+    .image-container {
+      position: relative;
+    }
+
+    img {
+      @include mixins.banner();
+    }
+
+    .header {
+      position: absolute;
+      bottom: -0.75rem;
+      width: fit-content;
+      font-size: theme.$font-header;
+      border-radius: theme.$spacing-small;
+      padding: theme.$spacing-small theme.$spacing-padding theme.$spacing-small
+        theme.$spacing-small;
+
+      @include mixins.desktop {
+        padding: theme.$spacing-small theme.$spacing-padding
+          theme.$spacing-small theme.$spacing-large;
+      }
+
+      span {
+        font-weight: theme.$extra-bold;
+      }
+    }
+
+    .description {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: theme.$spacing-large theme.$spacing-small theme.$spacing-small;
+
+      @include mixins.desktop {
+        padding: theme.$spacing-large theme.$spacing-padding
+          theme.$spacing-small theme.$spacing-large;
+      }
+    }
+  }
+}

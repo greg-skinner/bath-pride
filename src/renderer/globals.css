@@ -3,7 +3,7 @@
   src: url('/fonts/PlusJakartaSans-VariableFont_wght.ttf');
 }
 
-* {
+body {
   font-family: Jakarta, Arial, Helvetica, sans-serif;
   color: #252526;
 }

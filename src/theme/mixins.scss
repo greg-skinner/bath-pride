@@ -1,6 +1,7 @@
 @use '@theme/theme';
 
 $mobile-breakpoint: 900px;
+$banner-height: 350px;
 
 @mixin mobile {
   @media only screen and (width <= calc($mobile-breakpoint - 1px)) {
@@ -31,4 +32,14 @@ $mobile-breakpoint: 900px;
 @mixin title {
   font-size: theme.$font-header;
   font-weight: theme.$extra-bold;
+}
+
+@mixin banner {
+  display: block;
+  width: 100%;
+  position: relative;
+
+  @include mobile {
+    max-height: 60dvw;
+  }
 }

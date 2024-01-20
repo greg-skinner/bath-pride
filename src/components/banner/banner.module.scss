@@ -2,16 +2,11 @@
 @use '@theme/mixins';
 
 .banner {
-  display: block;
-  height: 350px;
-  width: 100%;
-  position: relative;
+  @include mixins.banner();
+
+  height: mixins.$banner-height;
   overflow: hidden;
   color: theme.$text;
-
-  @include mixins.mobile {
-    max-height: 60dvw;
-  }
 
   .image {
     width: 100%;

@@ -40,5 +40,9 @@
     @include mixins.desktop {
       padding: theme.$spacing-small;
     }
+
+    @include mixins.mobile {
+      max-width: 100dvw;
+    }
   }
 }
