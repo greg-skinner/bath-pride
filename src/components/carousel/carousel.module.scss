@@ -4,8 +4,12 @@
 
 .carousel {
   @include mixins.banner();
+  --swiper-navigation-top-offset: 45%;
+  --swiper-theme-color: #f0e7df;
 
   @include mixins.mobile {
+    --swiper-navigation-top-offset: 30%;
+    --swiper-pagination-bottom: 0px;
     max-height: 38dvh;
     height: 100%;
   }
@@ -68,8 +72,7 @@
       padding: theme.$spacing-large theme.$spacing-small theme.$spacing-small;
 
       @include mixins.desktop {
-        padding: theme.$spacing-large theme.$spacing-padding
-          theme.$spacing-small theme.$spacing-large;
+        padding: theme.$spacing-large;
       }
     }
   }

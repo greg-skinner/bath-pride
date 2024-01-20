@@ -1,6 +1,8 @@
 import * as React from 'react';
 
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 import _carouselData from '@assets/carousel/carousel.json';
 import SwiperCore from 'swiper';
