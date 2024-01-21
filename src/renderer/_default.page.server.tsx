@@ -10,7 +10,7 @@ import { dangerouslySkipEscape, escapeInject } from 'vike/server';
 import { Shell } from './shell';
 import type { IMetaData, PageContextServer } from './types';
 
-export const passToClient = ['pageProps', 'urlPathname'];
+export const passToClient = ['pageProps'];
 
 export const render = async (pageContext: PageContextServer) => {
   const { Page, pageProps } = pageContext;
@@ -47,7 +47,7 @@ export const render = async (pageContext: PageContextServer) => {
         <meta name="google" content="nositelinkssearchbox">
         <link rel="icon" sizes="192x192" href="${
           APP_CONFIG.BASE_URL
-        }/images/icon.png" />
+        }images/icon.png" />
         <meta name="description" content="${desc}" />
         <title>${`${title ? `${title} - ` : ''}Bath Pride`}</title>
         <meta name="subject" content="Bath Pride">
