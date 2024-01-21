@@ -45,7 +45,9 @@ export const render = async (pageContext: PageContextServer) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
         <meta name="google" content="nositelinkssearchbox">
-        <link rel="icon" sizes="192x192" href="/images/icon.png" />
+        <link rel="icon" sizes="192x192" href="${
+          APP_CONFIG.BASE_URL
+        }/images/icon.png" />
         <meta name="description" content="${desc}" />
         <title>${`${title ? `${title} - ` : ''}Bath Pride`}</title>
         <meta name="subject" content="Bath Pride">
@@ -55,7 +57,9 @@ export const render = async (pageContext: PageContextServer) => {
         <meta property="og:title" content="${title}" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content="${desc}" />
-        <meta property="og:image" content="${APP_CONFIG.HOST}/${img}" />
+        <meta property="og:image" content="${APP_CONFIG.HOST}${
+          APP_CONFIG.BASE_URL
+        }${img}" />
         <meta property="og:image:alt" content="${alt}" />
         <meta property="og:locale" content="en_GB">
         <meta property="og:url" content="${
