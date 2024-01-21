@@ -8,7 +8,7 @@ import './globals.css';
 import { dangerouslySkipEscape, escapeInject } from 'vike/server';
 
 import { Shell } from './shell';
-import type { PageContextServer } from './types';
+import type { IMetaData, PageContextServer } from './types';
 
 export const passToClient = ['pageProps', 'urlPathname'];
 
@@ -28,21 +28,40 @@ export const render = async (pageContext: PageContextServer) => {
 
   // See https://vike.dev.com/head
   const { documentProps, getDocumentProps } = pageContext.exports;
-  const getTitle =
-    (pageProps && getDocumentProps?.(pageProps).title) || documentProps?.title;
-  const title = `${getTitle ? `${getTitle} - ` : ''}Bath Pride`;
+  const getMetaData = (field: keyof IMetaData, fallback: string) =>
+    (pageProps && getDocumentProps?.(pageProps)[field]) ||
+    (documentProps && documentProps[field]) ||
+    fallback;
 
-  const desc =
-    (documentProps && documentProps.description) || 'App using Vite + Vike';
+  const title = getMetaData('title', '');
+  const desc = getMetaData('description', 'Bath Pride');
+  const img = getMetaData('img', 'images/logo_stone.png');
+  const alt = getMetaData('alt', 'Bath Pride logo');
 
   const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
-        <link rel="icon" href="" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+        <meta name="google" content="nositelinkssearchbox">
+        <link rel="icon" sizes="192x192" href="/images/icon.png" />
         <meta name="description" content="${desc}" />
-        <title>${title}</title>
+        <title>${`${title ? `${title} - ` : ''}Bath Pride`}</title>
+        <meta name="subject" content="Bath Pride">
+        <meta name="rating" content="General">
+        <meta name="referrer" content="no-referrer">
+        <meta property="og:site_name" content="Bath Pride">
+        <meta property="og:title" content="${title}" />
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content="${desc}" />
+        <meta property="og:image" content="${APP_CONFIG.HOST}/${img}" />
+        <meta property="og:image:alt" content="${alt}" />
+        <meta property="og:locale" content="en_GB">
+        <meta property="og:url" content="${
+          APP_CONFIG.HOST + pageContext.urlPathname
+        }" />
+        <meta name="twitter:card" content="summary_large_image" />
       </head>
       <body>
         <div id="root">${dangerouslySkipEscape(pageHtml)}</div>
