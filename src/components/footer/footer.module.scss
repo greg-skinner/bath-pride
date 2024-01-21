@@ -9,4 +9,12 @@
   align-items: center;
   padding: theme.$spacing-smaller;
   font-size: theme.$font-smaller;
+
+  .socials {
+    grid-area: hamburger;
+
+    @include mixins.desktop {
+      display: none;
+    }
+  }
 }

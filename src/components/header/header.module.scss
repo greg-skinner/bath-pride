@@ -45,10 +45,20 @@
     }
   }
 
+  .socials {
+    grid-area: hamburger;
+    place-self: center flex-end;
+
+    @include mixins.mobile {
+      display: none;
+    }
+  }
+
   .container {
     display: none;
     position: fixed;
     inset: 0;
+    z-index: 2;
 
     .dismiss {
       height: 100%;

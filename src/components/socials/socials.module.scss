@@ -1,0 +1,39 @@
+@use '@theme/theme';
+@use '@theme/mixins';
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-right: theme.$spacing-small;
+  align-items: center;
+  justify-content: space-evenly;
+  column-gap: theme.$spacing-small;
+
+  &.landscape {
+    flex-direction: row;
+  }
+
+  .link {
+    width: theme.$font-extra-large;
+    height: theme.$font-extra-large;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    min-height: 24px;
+    min-width: 24px;
+  }
+
+  .instagram {
+    background-image: url('./instagram.png');
+  }
+
+  .facebook {
+    background-image: url('./facebook.png');
+  }
+
+  .twitter {
+    background-image: url('./x.png');
+    background-size: 85%;
+  }
+}

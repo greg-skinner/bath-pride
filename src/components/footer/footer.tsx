@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { Socials } from '@components/socials';
+
 import styles from './footer.module.scss';
 import classNames from 'classnames';
 
@@ -14,7 +16,8 @@ export const Footer: React.FC<IFooterProps> = ({ className }) => (
       <div>Bath Pride</div>
       <div>Charity number: xxxx</div>
       <div>©2024</div>
+      <div className={styles.hash}>{APP_CONFIG.GIT_HASH}</div>
     </div>
-    <div className={styles.hash}>{APP_CONFIG.GIT_HASH}</div>
+    <Socials landscape className={styles.socials} />
   </div>
 );
