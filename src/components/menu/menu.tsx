@@ -42,7 +42,7 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
           );
       }
     };
-    console.log(pageMap);
+
     return (
       <div ref={ref} className={classNames(className, styles.menu)} {...rest}>
         <div className={styles.button}>
