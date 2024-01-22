@@ -1,6 +1,6 @@
 export type Slice = string;
 
-export interface IBlog {
+export interface IArticle {
   date: string;
   title: string;
   type: 'standard';

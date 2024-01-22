@@ -1,6 +1,6 @@
 export const fileToLink = (file: string) => {
   const link = file
-    .slice(9, -15)
+    .slice(9, -10)
     .split('-')
     .map((part) => part[0].toUpperCase() + part.slice(1))
     .join(' ');

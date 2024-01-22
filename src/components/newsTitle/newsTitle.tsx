@@ -1,15 +1,15 @@
 import * as React from 'react';
 
-import styles from './blogTitle.module.scss';
+import styles from './newsTitle.module.scss';
 import classNames from 'classnames';
 
-export interface IBlogTitleProps {
+export interface INewsTitleProps {
   className?: string;
   date?: string;
   title: string;
 }
 
-export const BlogTitle: React.FC<IBlogTitleProps> = ({
+export const NewsTitle: React.FC<INewsTitleProps> = ({
   className,
   date,
   title,

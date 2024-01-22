@@ -12,7 +12,7 @@ import type { IMetaData, PageContextServer } from './types';
 
 export const passToClient = ['pageProps'];
 
-export const render = async (pageContext: PageContextServer) => {
+export const onRenderHtml = async (pageContext: PageContextServer) => {
   const { Page, pageProps } = pageContext;
 
   // This render() hook only supports SSR, see https://vike.dev/render-modes for how to modify render() to support SPA

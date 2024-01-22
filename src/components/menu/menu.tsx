@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Link } from '@components/link/link';
 import { PageProps } from '@renderer/types';
-import { blogs, blogSlug, pageMap } from '@utils';
+import { news, newsSlug, pageMap } from '@utils';
 
 import styles from './menu.module.scss';
 import classNames from 'classnames';
@@ -17,15 +17,17 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
   ({ className, closeFunc, pageProps, ...rest }, ref) => {
     const render = (key: string) => {
       switch (key) {
-        case 'Blog':
+        case 'News':
           return (
             <React.Fragment key={pageMap[key]}>
               <Link href={`${pageMap[key]}`}>{key}</Link>
-              {pageProps?.blog && (
+              {pageProps?.article && (
                 <ul>
-                  {blogs.map((blog) => (
-                    <li key={blog.date + blog.title}>
-                      <Link href={`blog/${blogSlug(blog)}`}>{blog.title}</Link>
+                  {news.map((article) => (
+                    <li key={article.date + article.title}>
+                      <Link href={`news/${newsSlug(article)}`}>
+                        {article.title}
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -48,6 +50,7 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
         </div>
         {Object.keys(pageMap)
           .filter((key) => key.search('@') < 0)
+          .filter((key) => key.search('_') < 0)
           .sort((a, b) =>
             // eslint-disable-next-line no-nested-ternary -- sort logic
             a === 'Home' ? -1 : b === 'Home' ? 1 : a.localeCompare(b)

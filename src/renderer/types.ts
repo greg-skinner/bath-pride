@@ -3,10 +3,10 @@ import type {
   PageContextBuiltInClientWithClientRouting as PageContextBuiltInClient,
 } from 'vike/types';
 
-import { IBlog } from './blog.types';
+import { IArticle } from './news.types';
 
 export type PageProps = {
-  blog?: IBlog;
+  article?: IArticle;
 };
 export type Page = (pageProps: PageProps) => React.ReactElement;
 

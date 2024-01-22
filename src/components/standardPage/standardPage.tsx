@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { BlogTitle } from '@components/blogTitle';
+import { NewsTitle } from '@components/newsTitle';
 import { Image } from '@components/image';
 import { RenderText } from '@components/renderText';
 
@@ -50,7 +50,7 @@ export const StandardPage: React.FC<IStandardPageProps> = ({
       {text.map((item, index) => (
         <React.Fragment key={index}>
           {index === 0 && (
-            <BlogTitle className={styles.header} date={date} title={title} />
+            <NewsTitle className={styles.header} date={date} title={title} />
           )}
           <RenderText
             className={classNames(styles.text)}

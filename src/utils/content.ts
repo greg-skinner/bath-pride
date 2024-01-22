@@ -1,27 +1,27 @@
-import { IBlog } from '@renderer/blog.types';
+import { IArticle } from '@renderer/news.types';
 import { Page } from '@renderer/types';
 
 import { fileToLink, fileToUrl } from './urls';
 
-const blogImport: Record<string, { default: IBlog }> = import.meta.glob(
-  '../content/blogs/*',
+const newsImport: Record<string, { default: IArticle }> = import.meta.glob(
+  '../content/news/*',
   {
     eager: true,
   }
 );
 
-export const blogs = Object.values(blogImport)
+export const news = Object.values(newsImport)
   .map((item) => item.default)
   .sort((a, b) => b.date.localeCompare(a.date));
 
-export const blogSlug = (blog: IBlog) =>
-  `${blog.date}-${blog.title
+export const newsSlug = (article: IArticle) =>
+  `${article.date}-${article.title
     .replace(/[^ a-zA-Z]/g, '')
     .replace(/ /g, '-')
     .slice(0, 28)}`;
 
 const contentImport: Record<string, { Page: Page }> = import.meta.glob(
-  '../pages/**/index.page.tsx',
+  '../pages/**/+Page.tsx',
   {
     eager: true,
   }

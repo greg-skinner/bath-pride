@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { BlogTitle } from '@components/blogTitle';
 import { Image } from '@components/image';
+import { NewsTitle } from '@components/newsTitle';
 import { RenderText } from '@components/renderText';
 
 import styles from './bulletPage.module.scss';
@@ -35,7 +35,7 @@ export const BulletPage: React.FC<IBulletPageProps> = ({
       {text.map((item, index) => (
         <React.Fragment key={index}>
           {index === 0 && (
-            <BlogTitle className={styles.header} date={date} title={title} />
+            <NewsTitle className={styles.header} date={date} title={title} />
           )}
           {images[index] && (
             <Image
