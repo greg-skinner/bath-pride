@@ -5,7 +5,7 @@
 .carousel {
   @include mixins.banner();
   --swiper-navigation-top-offset: 45%;
-  --swiper-theme-color: #f0e7df;
+  --swiper-theme-color: #fff;
 
   @include mixins.mobile {
     --swiper-navigation-top-offset: 30%;
@@ -29,10 +29,7 @@
     @each $index, $colour in theme.$accents {
       &[data-index='#{$index}'] {
         .header {
-          background: map.get(theme.$accents, ($index * 2) % 9);
-        }
-        .description {
-          background: map.get(theme.$accents, ($index * 2 + 1) % 9);
+          background: map.get(theme.$accents, $index % 9);
         }
       }
     }
@@ -70,6 +67,8 @@
       justify-content: center;
       align-items: center;
       padding: theme.$spacing-large theme.$spacing-small theme.$spacing-small;
+      background: theme.$stone;
+      color: theme.$text;
 
       @include mixins.desktop {
         padding: theme.$spacing-large;
