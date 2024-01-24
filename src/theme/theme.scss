@@ -27,6 +27,8 @@ $mono-bg: khaki;
 $mono-border: color.adjust($mono-bg, $lightness: -30%);
 
 // Fonts
+$font-biggest: 3rem;
+$font-extra-large: 1.5rem;
 $font-extra-large: 1.5rem;
 $font-header: 1.25rem;
 $font-smaller: 0.75rem;
@@ -36,5 +38,6 @@ $extra-light: 100;
 // Spacings
 $spacing-padding: 3.5rem;
 $spacing-large: 1.5rem;
+$spacing-neutral: 1rem;
 $spacing-small: 0.85rem;
 $spacing-smaller: 0.25rem;

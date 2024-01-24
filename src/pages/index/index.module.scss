@@ -1,1 +1,24 @@
 @use '@theme/theme.scss';
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .headline {
+    margin: theme.$spacing-large;
+    font-weight: theme.$extra-bold;
+    font-size: theme.$font-biggest;
+  }
+
+  .text {
+    margin: theme.$spacing-large;
+  }
+
+  .hashtag {
+    margin: theme.$spacing-large;
+    font-weight: theme.$extra-bold;
+    font-size: theme.$font-header;
+  }
+}

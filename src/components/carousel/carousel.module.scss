@@ -20,10 +20,10 @@
     color: theme.$white;
     display: flex;
     flex-direction: column;
-    height: 30rem;
+    height: 23rem;
 
     @include mixins.mobile {
-      height: 38dvh;
+      height: 62dvw;
     }
 
     @each $index, $colour in theme.$accents {
@@ -40,6 +40,12 @@
 
     img {
       @include mixins.banner();
+      object-fit: cover;
+      height: 38dvh;
+
+      @include mixins.mobile {
+        height: 38dvw;
+      }
     }
 
     .header {
@@ -66,7 +72,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: theme.$spacing-large theme.$spacing-small theme.$spacing-small;
+      padding: theme.$spacing-small;
+      padding-top: theme.$spacing-neutral;
       background: theme.$stone;
       color: theme.$text;
 
