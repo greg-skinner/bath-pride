@@ -6,7 +6,8 @@
 
   height: mixins.$banner-height;
   overflow: hidden;
-  color: theme.$text;
+  color: theme.$white;
+  filter: drop-shadow(1px 1px 0px theme.$text);
 
   .image {
     width: 100%;
@@ -31,8 +32,7 @@
     font-weight: theme.$extra-light;
   }
 
-  &.dark > div {
-    color: theme.$white;
-    filter: drop-shadow(1px 1px 0px theme.$text);
+  & > div {
+    z-index: -1;
   }
 }
