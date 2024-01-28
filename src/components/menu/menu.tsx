@@ -15,7 +15,6 @@ export interface IMenuProps {
 export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
   ({ className, closeFunc, ...rest }, ref) => {
     const { pageProps, urlPathname } = React.useContext(PageContextState);
-    console.log(urlPathname);
 
     const render = (link: IMenuLink) => {
       switch (link.url) {
@@ -61,7 +60,6 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
           );
       }
     };
-    console.log('menuKeys', menuKeys());
 
     return (
       <div ref={ref} className={classNames(className, styles.menu)} {...rest}>
