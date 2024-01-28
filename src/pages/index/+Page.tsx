@@ -1,6 +1,8 @@
 import * as React from 'react';
 
 import _carouselData from '@assets/carousel/carousel.json';
+import { Banner } from '@components/banner';
+import { Carousel } from '@components/carousel';
 import { ICarousel } from '@components/carousel/carousel.type';
 
 import styles from './index.module.scss';

@@ -4,6 +4,7 @@ import { hydrateRoot } from 'react-dom/client';
 import 'normalize.css';
 import './globals.css';
 
+import { PageContextState } from './context';
 import { Shell } from './shell';
 import type { PageContextClient } from './types';
 
@@ -25,8 +26,10 @@ export const onRenderClient = async (pageContext: PageContextClient) => {
 
   hydrateRoot(
     root,
-    <Shell pageContext={pageContext}>
-      <Page {...pageProps} />
-    </Shell>
+    <PageContextState.Provider value={pageContext}>
+      <Shell>
+        <Page {...pageProps} />
+      </Shell>
+    </PageContextState.Provider>
   );
 };

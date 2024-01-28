@@ -7,7 +7,6 @@
   grid-template: 'icon options hamburger';
   grid-template-columns: auto 1fr auto;
   grid-auto-flow: column;
-  overflow-y: hidden;
   font-size: theme.$font-header;
 
   @include mixins.mobile {

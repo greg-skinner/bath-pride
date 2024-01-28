@@ -14,4 +14,49 @@
   .button {
     align-self: flex-end;
   }
+
+  .container {
+    position: relative;
+    overflow: visible;
+  }
+
+  .sub-link {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    max-height: 0;
+    background: theme.$stone;
+    width: 12rem;
+    left: 0;
+    top: 100%;
+    overflow: hidden;
+    line-height: 2rem;
+    z-index: 2;
+    transition: max-height ease-in-out 0.2s;
+
+    .child {
+      padding: theme.$spacing-smaller;
+      padding-left: theme.$spacing-small;
+    }
+  }
+
+  @include mixins.mobile {
+    .sub-link {
+      top: theme.$spacing-smaller;
+      line-height: normal;
+      max-height: fit-content;
+      position: relative;
+      display: none;
+
+      &.local {
+        display: flex;
+      }
+    }
+  }
+
+  @include mixins.desktop {
+    .container:hover .sub-link {
+      max-height: 120rem;
+    }
+  }
 }

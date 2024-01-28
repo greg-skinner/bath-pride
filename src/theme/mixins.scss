@@ -27,6 +27,11 @@ $banner-height: 350px;
   max-height: 6rem;
   max-width: 6rem;
   margin: 0.5rem;
+
+  @include mobile {
+    max-height: 4rem;
+    max-width: 4rem;
+  }
 }
 
 @mixin title {

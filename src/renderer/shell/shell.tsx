@@ -4,21 +4,12 @@ import 'normalize.css';
 
 import { Footer } from '@components/footer/footer';
 import { Header } from '@components/header';
-import { PageContext } from '@renderer/types';
 
 import styles from './shell.module.scss';
 
-export type IShellProps = React.PropsWithChildren<{
-  pageContext: PageContext;
-}>;
-
-export const Shell: React.FC<IShellProps> = ({ children, pageContext }) => (
+export const Shell: React.FC<React.PropsWithChildren> = ({ children }) => (
   <div className={styles.shell}>
-    <Header
-      className={styles.header}
-      icon={'images/logo_white.png'}
-      pageProps={pageContext.pageProps}
-    />
+    <Header className={styles.header} icon={'images/logo_white.png'} />
     <div className={styles.page}>{children}</div>
     <Footer className={styles.footer} msg={'footer'} />
   </div>

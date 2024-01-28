@@ -7,6 +7,7 @@ import './globals.css';
 
 import { dangerouslySkipEscape, escapeInject } from 'vike/server';
 
+import { PageContextState } from './context';
 import { Shell } from './shell';
 import type { IMetaData, PageContextServer } from './types';
 
@@ -21,9 +22,11 @@ export const onRenderHtml = async (pageContext: PageContextServer) => {
   }
 
   const pageHtml = ReactDOMServer.renderToString(
-    <Shell pageContext={pageContext}>
-      <Page {...pageProps} />
-    </Shell>
+    <PageContextState.Provider value={pageContext}>
+      <Shell>
+        <Page {...pageProps} />
+      </Shell>
+    </PageContextState.Provider>
   );
 
   // See https://vike.dev.com/head
@@ -53,7 +56,7 @@ export const onRenderHtml = async (pageContext: PageContextServer) => {
         <meta name="rating" content="General">
         <meta name="referrer" content="no-referrer">
         <meta property="og:site_name" content="Bath Pride">
-        <meta property="og:title" content="${title}" />
+        <meta property="og:title" content="${title || 'Bath Pride'}" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content="${desc}" />
         <meta property="og:image" content="${APP_CONFIG.HOST}${

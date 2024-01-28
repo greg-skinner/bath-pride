@@ -1,8 +1,8 @@
 import * as React from 'react';
 
 import { Link } from '@components/link/link';
-import { PageProps } from '@renderer/types';
-import { news, newsSlug, pageMap } from '@utils';
+import { PageContextState } from '@renderer/context';
+import { IMenuLink, menuKeys, news, newsSlug } from '@utils';
 
 import styles from './menu.module.scss';
 import classNames from 'classnames';
@@ -10,17 +10,19 @@ import classNames from 'classnames';
 export interface IMenuProps {
   className?: string;
   closeFunc?: () => void;
-  pageProps?: PageProps;
 }
 
 export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
-  ({ className, closeFunc, pageProps, ...rest }, ref) => {
-    const render = (key: string) => {
-      switch (key) {
-        case 'News':
+  ({ className, closeFunc, ...rest }, ref) => {
+    const { pageProps, urlPathname } = React.useContext(PageContextState);
+    console.log(urlPathname);
+
+    const render = (link: IMenuLink) => {
+      switch (link.url) {
+        case 'news':
           return (
-            <React.Fragment key={pageMap[key]}>
-              <Link href={`${pageMap[key]}`}>{key}</Link>
+            <React.Fragment key={link.url}>
+              <Link href={`${link.url}`}>{link.link}</Link>
               {pageProps?.article && (
                 <ul>
                   {news.map((article) => (
@@ -36,26 +38,37 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
           );
         default:
           return (
-            <React.Fragment key={pageMap[key]}>
-              <Link href={`${pageMap[key]}`}>{key}</Link>
-            </React.Fragment>
+            <div className={styles.container} key={link.url}>
+              <Link href={`${link.url}`}>{link.link}</Link>
+              {link.sub && (
+                <div
+                  className={classNames(styles.subLink, {
+                    [styles.local]: link.local,
+                  })}
+                >
+                  {link.sub.map((sub) => (
+                    <Link
+                      className={styles.child}
+                      key={sub.url}
+                      href={`${sub.url}`}
+                    >
+                      {sub.link}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           );
       }
     };
+    console.log('menuKeys', menuKeys());
 
     return (
       <div ref={ref} className={classNames(className, styles.menu)} {...rest}>
         <div className={styles.button}>
           {closeFunc && <button onClick={closeFunc}>🞫</button>}
         </div>
-        {Object.keys(pageMap)
-          .filter((key) => key.search('@') < 0)
-          .filter((key) => key.search('_') < 0)
-          .sort((a, b) =>
-            // eslint-disable-next-line no-nested-ternary -- sort logic
-            a === 'Home' ? -1 : b === 'Home' ? 1 : a.localeCompare(b)
-          )
-          .map(render)}
+        {menuKeys(urlPathname.split('/')[1]).map(render)}
       </div>
     );
   }
