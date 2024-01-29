@@ -14,7 +14,7 @@ export const Footer: React.FC<IFooterProps> = ({ className }) => (
   <div className={classNames(className, styles.footer)}>
     <div className={styles.msg}>
       <div>Bath Pride</div>
-      <div>Charity number: xxxx</div>
+      <div>Registed charity number 1206748</div>
       <div>©2024</div>
       <div className={styles.hash}>{APP_CONFIG.GIT_HASH}</div>
     </div>
