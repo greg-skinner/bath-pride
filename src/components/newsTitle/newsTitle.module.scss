@@ -6,10 +6,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: theme.$spacing-small;
+  margin: theme.$spacing-small 0;
 
   .title {
     font-size: theme.$font-header;
+    font-weight: theme.$extra-bold;
   }
 
   .date {
