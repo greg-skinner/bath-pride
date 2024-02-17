@@ -8,11 +8,11 @@
   --swiper-theme-color: #fff;
 
   @include mixins.mobile {
-    --swiper-navigation-top-offset: 30%;
+    --swiper-navigation-top-offset: 50%;
     --swiper-pagination-bottom: 0px;
-    max-height: 38dvh;
-    height: 100%;
+    // max-height: 38dvh;
   }
+  height: 100%;
   overflow: hidden;
 
   .carousel-page {
@@ -20,10 +20,15 @@
     color: theme.$white;
     display: flex;
     flex-direction: column;
-    height: 23rem;
 
     @include mixins.mobile {
-      height: 62dvw;
+      height: 44dvw;
+    }
+
+    &.content {
+      @include mixins.mobile {
+        height: 62dvw;
+      }
     }
 
     @each $index, $colour in theme.$accents {
@@ -41,10 +46,10 @@
     img {
       @include mixins.banner();
       object-fit: cover;
-      height: 38dvh;
+      height: 48dvh;
 
       @include mixins.mobile {
-        height: 38dvw;
+        height: 44dvw;
       }
     }
 

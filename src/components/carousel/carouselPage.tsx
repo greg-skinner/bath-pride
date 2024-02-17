@@ -16,14 +16,23 @@ export const CarouselPage: React.FC<ICarouselPageProps> = ({
   file,
   title,
 }) => (
-  <div className={styles.carouselPage} data-index={index}>
+  <div
+    className={classNames(styles.carouselPage, {
+      [styles.content]: description,
+    })}
+    data-index={index}
+  >
     <div className={styles.imageContainer}>
       <img src={`${APP_CONFIG.BASE_URL}${file}`} alt={alt} />
-      <div className={classNames(styles.header)}>
-        <span>{title.split(' ')[0]} </span>
-        {title.split(' ').slice(1).join(' ')}
-      </div>
+      {title && (
+        <div className={classNames(styles.header)}>
+          <span>{title.split(' ')[0]} </span>
+          {title.split(' ').slice(1).join(' ')}
+        </div>
+      )}
     </div>
-    <div className={classNames(styles.description)}>{description}</div>
+    {description && (
+      <div className={classNames(styles.description)}>{description}</div>
+    )}
   </div>
 );

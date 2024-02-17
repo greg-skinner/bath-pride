@@ -1,12 +1,13 @@
 import * as React from 'react';
 
 import 'swiper/css';
+import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import _carouselData from '@assets/carousel/carousel.json';
 import SwiperCore from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { ICarousel } from './carousel.type';
@@ -21,16 +22,19 @@ export interface ICarouselProps {
   className?: string;
 }
 
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Autoplay, Navigation, Pagination]);
 
 export const Carousel: React.FC<ICarouselProps> = ({ className }) => (
   <div className={classNames(className, styles.carousel)}>
     <Swiper
-      modules={[Navigation, Pagination]}
+      modules={[Autoplay, Navigation, Pagination]}
       slidesPerView={1}
+      autoplay={{ delay: 4500 }}
       navigation
       pagination={{ clickable: true }}
       spaceBetween={0}
+      loop
+      speed={800}
     >
       {carouselData.map((item, idx) => (
         <SwiperSlide key={item.file}>

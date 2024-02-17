@@ -1,7 +1,7 @@
 import * as React from 'react';
+import { InstagramEmbed } from 'react-social-media-embed';
 
 import _carouselData from '@assets/carousel/carousel.json';
-import { Banner } from '@components/banner';
 import { Carousel } from '@components/carousel';
 import { ICarousel } from '@components/carousel/carousel.type';
 
@@ -12,6 +12,7 @@ const carouselData: ICarousel = _carouselData;
 export const Page: React.FC = () => (
   <div>
     <div className={styles.content}>
+      <Carousel />
       <div className={styles.headline}>Bath Pride is finally here!</div>
       <div className={styles.text}>
         Bath Pride is finally coming to Bath as its own distinct event. With the
@@ -20,6 +21,13 @@ export const Page: React.FC = () => (
         to make a pride we can all be proud of.
       </div>
       <div className={styles.hashtag}>#BathPride</div>
+      <div className={styles.embed}>
+        <InstagramEmbed
+          url="https://www.instagram.com/bath.pride/"
+          width={'100%'}
+          debug
+        />
+      </div>
     </div>
   </div>
 );

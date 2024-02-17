@@ -1,4 +1,5 @@
 @use '@theme/theme.scss';
+@use '@theme/mixins.scss';
 
 .content {
   display: flex;
@@ -20,5 +21,13 @@
     margin: theme.$spacing-large;
     font-weight: theme.$extra-bold;
     font-size: theme.$font-header;
+  }
+
+  .embed {
+    width: 100%;
+
+    @include mixins.desktop {
+      width: 66%;
+    }
   }
 }
