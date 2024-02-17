@@ -29,6 +29,7 @@
 @include mixins.mobile {
   .content {
     display: grid;
+    margin: theme.$spacing-small;
 
     > div {
       margin-bottom: theme.$spacing-small;

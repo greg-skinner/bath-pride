@@ -11,6 +11,7 @@ export interface IBulletPageProps {
   className?: string;
   content: string[];
   date: string;
+  folder?: string;
   title: string;
 }
 
@@ -18,6 +19,7 @@ export const BulletPage: React.FC<IBulletPageProps> = ({
   className,
   content,
   date,
+  folder,
   title,
 }) => {
   const text: string[] = [];
@@ -42,7 +44,7 @@ export const BulletPage: React.FC<IBulletPageProps> = ({
               className={classNames(styles.image)}
               dataLine={images[index]}
               cssVar={{ '--grid-row': String(index + 2) }}
-              folder="news"
+              folder={folder || 'news'}
             />
           )}
           <RenderText

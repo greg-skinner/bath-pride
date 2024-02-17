@@ -17,7 +17,11 @@ export const RenderText: React.FC<IRenderTextProps> = ({
   text,
 }) => {
   if (text[0] === '#') {
-    return <h1>{text.slice(2)}</h1>;
+    return (
+      <h3 className={classNames(className)} style={cssVar}>
+        {text.slice(2)}
+      </h3>
+    );
   }
 
   if (text.indexOf('*') > -1) {

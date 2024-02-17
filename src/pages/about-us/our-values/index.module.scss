@@ -1,0 +1,25 @@
+@use '@theme/theme.scss';
+@use '@theme/mixins.scss';
+
+.values {
+  img {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  label {
+    font-size: theme.$font-header;
+  }
+
+  @include mixins.desktop {
+    grid-row-gap: theme.$spacing-neutral;
+  }
+
+  @include mixins.mobile {
+    text-align: center;
+
+    div:nth-of-type(2) {
+      text-align: left;
+    }
+  }
+}
