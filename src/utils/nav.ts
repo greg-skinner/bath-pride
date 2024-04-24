@@ -43,7 +43,15 @@ const contentImport: Record<string, { Page: Page }> = import.meta.glob(
   }
 );
 
-const sortOrder = ['events', 'news', 'our-partners', 'about-us'];
+const sortOrder = [
+  'events',
+  'news',
+  'our-partners',
+  'about-us',
+  'Our Team',
+  'Our Values',
+  'Governance',
+];
 const menuSort = (a: string, b: string) => {
   const initial =
     sortOrder.indexOf(a.match(/^([^/]*)/)![0]) -
@@ -64,7 +72,7 @@ const menuSort = (a: string, b: string) => {
 };
 
 export const menuKeys = (local?: string): IMenuLink[] => {
-  let pages = Object.keys(contentImport).map((file) => file.slice(9, -10));
+  const pages = Object.keys(contentImport).map((file) => file.slice(9, -10));
 
   const links: IMenuLink[] = [];
 
@@ -91,6 +99,12 @@ export const menuKeys = (local?: string): IMenuLink[] => {
         parent.sub.push(makeMenuLink(page));
       }
     });
+
+  links.forEach((link) => {
+    if (link.sub) {
+      link.sub.sort((a, b) => menuSort(a.link, b.link));
+    }
+  });
 
   return links;
 };

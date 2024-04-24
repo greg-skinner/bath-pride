@@ -4,15 +4,17 @@
     "alt": "Stay tuned! Bath Pride is coming"
   },
   {
+    "file": "news/read-article.jpg",
+    "alt": "Read about the creation of Bath Pride",
+    "action": "news/2024-04-24"
+  },
+  {
     "file": "carousel/donate.jpg",
     "alt": "Donate to Bath Pride"
   },
   {
     "file": "carousel/follow-us.jpg",
-    "alt": "Follow us on Instagram @Bath.pride"
-  },
-  {
-    "file": "carousel/read-article.jpg",
-    "alt": "Read about the creation of Bath Pride"
+    "alt": "Follow us on Instagram @Bath.pride",
+    "action": "https://www.instagram.com/bath.pride/"
   }
 ]

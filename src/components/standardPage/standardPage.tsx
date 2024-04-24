@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { NewsTitle } from '@components/newsTitle';
 import { Image } from '@components/image';
+import { NewsTitle } from '@components/newsTitle';
 import { RenderText } from '@components/renderText';
 
 import styles from './standardPage.module.scss';
@@ -11,6 +11,7 @@ export interface IStandardPageProps {
   className?: string;
   content: string[];
   date: string;
+  folder?: string;
   title: string;
 }
 
@@ -18,6 +19,7 @@ export const StandardPage: React.FC<IStandardPageProps> = ({
   className,
   content,
   date,
+  folder,
   title,
 }) => {
   const text: string[] = [];
@@ -62,7 +64,7 @@ export const StandardPage: React.FC<IStandardPageProps> = ({
               className={classNames(styles.image)}
               dataLine={images[index]}
               cssVar={createCssVars(index)}
-              folder="news"
+              folder={folder || 'news'}
             />
           )}
         </React.Fragment>

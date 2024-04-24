@@ -1,0 +1,32 @@
+@use '@theme/theme.scss';
+@use '@theme/mixins.scss';
+
+.team {
+  img {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  label {
+    display: none;
+  }
+
+  ul {
+    margin-top: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: theme.$font-header;
+  }
+
+  @include mixins.desktop {
+    grid-row-gap: theme.$spacing-neutral;
+  }
+
+  @include mixins.mobile {
+    text-align: center;
+
+    div:nth-of-type(2) {
+      text-align: left;
+    }
+  }
+}

@@ -10,29 +10,52 @@ export interface ICarouselPageProps extends ICarouselItem {
 }
 
 export const CarouselPage: React.FC<ICarouselPageProps> = ({
+  action,
   alt,
   description,
   index,
   file,
   title,
-}) => (
-  <div
-    className={classNames(styles.carouselPage, {
-      [styles.content]: description,
-    })}
-    data-index={index}
-  >
-    <div className={styles.imageContainer}>
-      <img src={`${APP_CONFIG.BASE_URL}${file}`} alt={alt} />
-      {title && (
-        <div className={classNames(styles.header)}>
-          <span>{title.split(' ')[0]} </span>
-          {title.split(' ').slice(1).join(' ')}
-        </div>
+}) => {
+  const content = (
+    <>
+      <div className={styles.imageContainer}>
+        <img src={`${APP_CONFIG.BASE_URL}${file}`} alt={alt} />
+        {title && (
+          <div className={classNames(styles.header)}>
+            <span>{title.split(' ')[0]} </span>
+            {title.split(' ').slice(1).join(' ')}
+          </div>
+        )}
+      </div>
+      {description && (
+        <div className={classNames(styles.description)}>{description}</div>
       )}
+    </>
+  );
+
+  if (action) {
+    return (
+      <a
+        className={classNames(styles.carouselPage, {
+          [styles.content]: description,
+        })}
+        data-index={index}
+        href={action}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <div
+      className={classNames(styles.carouselPage, {
+        [styles.content]: description,
+      })}
+      data-index={index}
+    >
+      {content}
     </div>
-    {description && (
-      <div className={classNames(styles.description)}>{description}</div>
-    )}
-  </div>
-);
+  );
+};

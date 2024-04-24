@@ -20,20 +20,24 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
       switch (link.url) {
         case 'news':
           return (
-            <React.Fragment key={link.url}>
+            <div className={styles.container} key={link.url}>
               <Link href={`${link.url}`}>{link.link}</Link>
-              {pageProps?.article && (
-                <ul>
-                  {news.map((article) => (
-                    <li key={article.date + article.title}>
-                      <Link href={`news/${newsSlug(article)}`}>
-                        {article.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </React.Fragment>
+              <div
+                className={classNames(styles.subLink, styles.news, {
+                  [styles.local]: link.local,
+                })}
+              >
+                {news.map((article) => (
+                  <Link
+                    className={styles.child}
+                    key={newsSlug(article)}
+                    href={`news/${newsSlug(article)}`}
+                  >
+                    {article.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
           );
         default:
           return (
