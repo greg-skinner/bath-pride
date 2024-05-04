@@ -47,9 +47,11 @@
       @include mixins.banner();
       object-fit: cover;
       height: 48dvh;
+      min-height: 350px;
 
       @include mixins.mobile {
         height: 44dvw;
+        min-height: unset;
       }
     }
 

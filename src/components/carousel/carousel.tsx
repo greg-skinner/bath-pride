@@ -29,7 +29,7 @@ export const Carousel: React.FC<ICarouselProps> = ({ className }) => (
     <Swiper
       modules={[Autoplay, Navigation, Pagination]}
       slidesPerView={1}
-      autoplay={{ delay: 4500 }}
+      // autoplay={{ delay: 4500 }}
       navigation
       pagination={{ clickable: true }}
       spaceBetween={0}
