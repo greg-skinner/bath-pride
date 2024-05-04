@@ -1,2 +1,11 @@
 @use '@theme/mixins';
 @use '@theme/theme';
+
+.link {
+  color: #3057a4;
+  text-decoration: underline;
+
+  &:visited {
+    color: #942d88;
+  }
+}

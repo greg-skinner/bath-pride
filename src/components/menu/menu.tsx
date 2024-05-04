@@ -21,7 +21,9 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
         case 'news':
           return (
             <div className={styles.container} key={link.url}>
-              <Link href={`${link.url}`}>{link.link}</Link>
+              <Link menuLink href={`${link.url}`}>
+                {link.link}
+              </Link>
               <div
                 className={classNames(styles.subLink, styles.news, {
                   [styles.local]: link.local,
@@ -29,6 +31,7 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
               >
                 {news.map((article) => (
                   <Link
+                    menuLink
                     className={styles.child}
                     key={newsSlug(article)}
                     href={`news/${newsSlug(article)}`}
@@ -42,7 +45,9 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
         default:
           return (
             <div className={styles.container} key={link.url}>
-              <Link href={`${link.url}`}>{link.link}</Link>
+              <Link menuLink href={`${link.url}`}>
+                {link.link}
+              </Link>
               {link.sub && (
                 <div
                   className={classNames(styles.subLink, {
@@ -51,6 +56,7 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
                 >
                   {link.sub.map((sub) => (
                     <Link
+                      menuLink
                       className={styles.child}
                       key={sub.url}
                       href={`${sub.url}`}
