@@ -4,7 +4,7 @@ import _carouselData from '@assets/carousel/carousel.json';
 import { BulletPage } from '@components/bulletPage/bulletPage';
 import { ICarousel } from '@components/carousel/carousel.type';
 
-import _content from './values.json';
+import _content from './ourTeam.json';
 
 import styles from './index.module.scss';
 
