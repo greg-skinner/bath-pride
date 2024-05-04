@@ -25,7 +25,7 @@ export const Page: React.FC = () => (
 );
 
 export const documentProps = {
-  title: 'Our values',
+  title: 'Our Values',
   description:
     'Our values underpin everything we do. They shape our approach to our events, activities, and decision making, as well as the behaviours of everyone involved at Bath Pride.',
   img: carouselData[0].file,
