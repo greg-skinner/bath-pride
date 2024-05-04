@@ -14,6 +14,7 @@ export const Page: React.FC = () => (
 );
 
 export const documentProps = {
+  title: 'The Bath Pride 2024',
   description: 'The Bath Pride 2024',
   img: carouselData[0].file,
 };

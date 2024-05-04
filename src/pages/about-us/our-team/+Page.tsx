@@ -25,6 +25,7 @@ export const Page: React.FC = () => (
 );
 
 export const documentProps = {
-  description: 'Our Team',
+  title: 'Our Team',
+  description: 'Our team of volunteers, working hard to deliver Bath Pride.',
   img: carouselData[0].file,
 };

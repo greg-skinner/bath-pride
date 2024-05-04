@@ -63,10 +63,8 @@ export const Page: React.FC = () => (
     <NewsTitle title="Decision Making" />
     <div>
       Bath Pride is run by the{' '}
-      <Link className={styles.inlineLink} href={'/about-us/our-team/'}>
-        Board of Trustees
-      </Link>{' '}
-      who have a variety of duties, including:
+      <Link href={'/about-us/our-team/'}>Board of Trustees</Link> who have a
+      variety of duties, including:
     </div>
     <ul>
       <li>creating and approving all our policies and governing documents,</li>
@@ -181,6 +179,8 @@ export const Page: React.FC = () => (
 );
 
 export const documentProps = {
-  description: 'Governance',
+  title: 'Governance',
+  description:
+    'Bath Pride is a registered charity and we exist to undertake our charitable objects. This page contains what our purpose is, ourconstitution, and our policies.',
   img: carouselData[0].file,
 };
