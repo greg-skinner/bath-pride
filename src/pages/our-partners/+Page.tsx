@@ -14,7 +14,7 @@ export const Page: React.FC = () => (
 );
 
 export const documentProps = {
-  title: 'Our partners',
+  title: 'Our Partners',
   description: 'Our partners',
   img: carouselData[0].file,
 };

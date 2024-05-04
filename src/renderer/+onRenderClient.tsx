@@ -6,7 +6,7 @@ import './globals.css';
 
 import { PageContextState } from './context';
 import { Shell } from './shell';
-import type { PageContextClient } from './types';
+import type { IMetaData, PageContextClient } from './types';
 
 // This render() hook only supports SSR, see https://vike.dev/render-modes for how to modify render() to support SPA
 export const onRenderClient = async (pageContext: PageContextClient) => {
@@ -23,6 +23,16 @@ export const onRenderClient = async (pageContext: PageContextClient) => {
   if (!root) {
     throw new Error('DOM element #root not found');
   }
+
+  const { documentProps, getDocumentProps } = pageContext.exports;
+  const getMetaData = (field: keyof IMetaData, fallback: string) =>
+    (pageProps && getDocumentProps?.(pageProps)[field]) ||
+    (documentProps && documentProps[field]) ||
+    fallback;
+
+  const title = getMetaData('title', '');
+
+  document.title = `${`${title ? `${title} - ` : ''}Bath Pride`}`;
 
   hydrateRoot(
     root,
