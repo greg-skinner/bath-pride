@@ -9,7 +9,7 @@ const commitHash = require('child_process')
 
 export default ({ mode }) => {
   const isDevelopment = mode === 'development';
-  const base = isDevelopment ? '/' : '/bath-pride/';
+  const base = '/';
   return defineConfig({
     base,
     root: 'src',
