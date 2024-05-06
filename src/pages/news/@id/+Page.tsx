@@ -4,13 +4,8 @@ import { BulletPage } from '@components/bulletPage/bulletPage';
 import { StandardPage } from '@components/standardPage';
 import { IArticle } from '@renderer/news.types';
 import { PageProps } from '@renderer/types';
-import { redirect } from 'vike/abort';
 
 export const Page = ({ article }: { article: IArticle }) => {
-  if (!article) {
-    throw redirect('/news');
-  }
-
   if (article.type === 'standard') {
     return (
       <StandardPage

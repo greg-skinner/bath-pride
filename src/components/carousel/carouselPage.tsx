@@ -1,10 +1,11 @@
 import * as React from 'react';
 
+import { Link } from '@components/link/link';
+
 import { ICarouselItem } from './carousel.type';
 
 import styles from './carousel.module.scss';
 import classNames from 'classnames';
-import { Link } from '@components/link/link';
 
 export interface ICarouselPageProps extends ICarouselItem {
   index: number;
