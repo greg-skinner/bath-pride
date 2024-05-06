@@ -38,7 +38,7 @@ export const onBeforePrerenderStart = () =>
       pageContext: {
         title: 'News',
         pageProps: {
-          news,
+          article,
         },
       },
     };
