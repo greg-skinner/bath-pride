@@ -9,7 +9,8 @@ export const Page: React.FC = () => (
     <div className={styles.title}>Bath Pride 2024</div>
     <div className={styles.copy}>
       We are excited to bring you Bath’s first ever pride event! Join us for a
-      family picnic, a protest march, and the official after party at WIG!{' '}
+      family picnic, a protest march, and the official after party at WIG! Make
+      sure you have the date in your calendar!
     </div>
     <div className={styles.events}>
       <EventTitle
