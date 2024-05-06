@@ -1,7 +1,8 @@
 [
   {
     "file": "carousel/stay-tuned.jpg",
-    "alt": "Stay tuned! Bath Pride is coming"
+    "alt": "Stay tuned! Bath Pride is coming",
+    "action": "bath-pride-2024"
   },
   {
     "file": "news/read-article.jpg",
@@ -10,7 +11,8 @@
   },
   {
     "file": "carousel/donate.jpg",
-    "alt": "Donate to Bath Pride"
+    "alt": "Donate to Bath Pride",
+    "action": "https://www.paypal.com/gb/fundraiser/charity/5069290"
   },
   {
     "file": "carousel/follow-us.jpg",
