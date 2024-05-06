@@ -1,20 +1,32 @@
 import * as React from 'react';
 
-import _carouselData from '@assets/carousel/carousel.json';
-import { ICarousel } from '@components/carousel/carousel.type';
+import { PartnerBubble } from '@components/partnerBubble';
 
 import styles from './index.module.scss';
 
-const carouselData: ICarousel = _carouselData;
-
 export const Page: React.FC = () => (
-  <div>
-    <div className={styles.content}>Our partners</div>
+  <div className={styles.page}>
+    <div className={styles.title}>Our partners</div>
+    <div className={styles.partners}>
+      <PartnerBubble
+        accent={1}
+        img={"@WIG.jpg::WIG!'s logo"}
+        title={'WIG!'}
+        link={'https://www.instagram.com/wigbath'}
+      />
+      <PartnerBubble
+        accent={2}
+        img={
+          '@The_Holburne_Museum.jpg::The front facade of the Holburne Museum'
+        }
+        title={'The Holburne Museum'}
+        link={'https://www.holburne.org/'}
+      />
+    </div>
   </div>
 );
 
 export const documentProps = {
   title: 'Our Partners',
   description: 'Our partners',
-  img: carouselData[0].file,
 };

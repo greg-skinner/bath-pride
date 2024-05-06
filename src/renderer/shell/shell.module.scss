@@ -36,12 +36,10 @@
   .page {
     grid-area: page;
     max-width: mixins.$mobile-breakpoint;
-
-    @include mixins.desktop {
-      padding: theme.$spacing-small;
-    }
+    padding: theme.$spacing-small;
 
     @include mixins.mobile {
+      padding: 0;
       max-width: 100dvw;
     }
   }

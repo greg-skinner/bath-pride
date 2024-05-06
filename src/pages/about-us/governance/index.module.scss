@@ -5,11 +5,6 @@
   list-style-type: none;
 }
 
-.inline-link {
-  color: #3057a4;
-  text-decoration: underline;
-
-  &:visited {
-    color: #942d88;
-  }
+.page {
+  padding: theme.$spacing-small;
 }

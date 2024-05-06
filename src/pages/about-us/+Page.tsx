@@ -1,20 +1,51 @@
 import * as React from 'react';
 
-import _carouselData from '@assets/carousel/carousel.json';
-import { ICarousel } from '@components/carousel/carousel.type';
+import { Link } from '@components/link/link';
 
 import styles from './index.module.scss';
 
-const carouselData: ICarousel = _carouselData;
-
 export const Page: React.FC = () => (
-  <div>
-    <div className={styles.content}>About us</div>
+  <div className={styles.page}>
+    <div className={styles.leading}>
+      Bath Pride is a registered charity. Everything we do is aimed towards
+      bringing the local LGBT+ community through events and campaigns.
+    </div>
+    <Link className={styles.link} href="about-us/governance">
+      Governance
+    </Link>
+    <div>
+      As a registered charity, we exist to undertake our charitable objects.
+      Find out about our constitution, policies, and frameworks that exist to
+      enable us to undertake our work.
+    </div>
+    <Link className={styles.link} href="about-us/our-team">
+      Our Team
+    </Link>
+    <div>
+      Bath Pride is run by local LGBT+ people who volunteer their time to bring
+      you Bath Pride. Find out about our Trustee Board and Organising Committee.
+    </div>
+    <Link className={styles.link} href="about-us/our-values">
+      Our Values
+    </Link>
+    <div>
+      Everything we do is guided by our values: Affirming, Transparent, Justice,
+      Grassroots, Vibrant, and Safe. Find out how we define our values in
+      practice.
+    </div>
+    <br />
+    <div className={styles.leading}>
+      If you have any questions or queries, please email{' '}
+      <a className={styles.inlineLink} href="mailto:hello@bathpride.org">
+        hello@bathpride.org
+      </a>
+      . Remember that we are all volunteers so it may take some time to get back
+      to you, but we will respond as quickly as we can.
+    </div>
   </div>
 );
 
 export const documentProps = {
   title: 'About Us',
   description: 'About us',
-  img: carouselData[0].file,
 };

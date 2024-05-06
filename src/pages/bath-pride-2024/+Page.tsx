@@ -5,7 +5,7 @@ import { EventTitle } from '@components/eventTitle';
 import styles from './index.module.scss';
 
 export const Page: React.FC = () => (
-  <div>
+  <div className={styles.page}>
     <div className={styles.title}>Bath Pride 2024</div>
     <div className={styles.copy}>
       We are excited to bring you Bath’s first ever pride event! Join us for a
@@ -14,7 +14,7 @@ export const Page: React.FC = () => (
     <div className={styles.events}>
       <EventTitle
         img={
-          '@The_Holburne_Museum.jpg::A picture of the front facade of the Holburne Museum'
+          '@The_Holburne_Museum.jpg::The front facade of the Holburne Museum'
         }
         className={styles.event}
         title={'Family Picnic'}

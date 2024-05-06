@@ -1,1 +1,5 @@
 @use '@theme/theme.scss';
+
+.page {
+  padding: theme.$spacing-small;
+}

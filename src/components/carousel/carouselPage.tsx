@@ -4,6 +4,7 @@ import { ICarouselItem } from './carousel.type';
 
 import styles from './carousel.module.scss';
 import classNames from 'classnames';
+import { Link } from '@components/link/link';
 
 export interface ICarouselPageProps extends ICarouselItem {
   index: number;
@@ -36,7 +37,7 @@ export const CarouselPage: React.FC<ICarouselPageProps> = ({
 
   if (action) {
     return (
-      <a
+      <Link
         className={classNames(styles.carouselPage, {
           [styles.content]: description,
         })}
@@ -44,7 +45,7 @@ export const CarouselPage: React.FC<ICarouselPageProps> = ({
         href={action}
       >
         {content}
-      </a>
+      </Link>
     );
   }
 

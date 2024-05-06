@@ -1,1 +1,25 @@
 @use '@theme/theme.scss';
+
+.inline-link {
+  color: #3057a4;
+  text-decoration: underline;
+
+  &:visited {
+    color: #942d88;
+  }
+}
+
+.leading {
+  padding: theme.$spacing-neutral 0;
+}
+
+.link {
+  display: block;
+  padding: theme.$spacing-neutral 0;
+  font-size: theme.$font-header;
+  font-weight: theme.$extra-bold;
+}
+
+.page {
+  padding: theme.$spacing-small;
+}

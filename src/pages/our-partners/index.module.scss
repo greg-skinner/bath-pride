@@ -1,1 +1,24 @@
+@use '@theme/mixins.scss';
 @use '@theme/theme.scss';
+
+.title {
+  font-size: theme.$font-header;
+  font-weight: theme.$extra-bold;
+  margin-bottom: theme.$spacing-neutral;
+}
+
+.partners {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: theme.$spacing-neutral;
+
+  @include mixins.mobile {
+    width: 100%;
+    grid-auto-flow: row;
+    justify-content: center;
+  }
+}
+
+.page {
+  padding: theme.$spacing-small;
+}

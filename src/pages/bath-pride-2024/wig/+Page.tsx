@@ -6,10 +6,12 @@ import { StandardPage } from '@components/standardPage';
 
 import _content from './wig.json';
 
+import styles from './index.module.scss';
+
 const content: string[] = _content;
 
 export const Page: React.FC = () => (
-  <div>
+  <div className={styles.page}>
     <EventTitle
       title={'WIG! Midsummer Night’s Dream'}
       date={new Date('2024-08-18')}

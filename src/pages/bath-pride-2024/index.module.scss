@@ -1,3 +1,4 @@
+@use '@theme/mixins.scss';
 @use '@theme/theme.scss';
 
 .title {
@@ -14,7 +15,13 @@
   flex-direction: column;
   align-items: center;
 
-  .event {
-    width: 90%;
+  @include mixins.desktop {
+    .event {
+      width: 90%;
+    }
   }
+}
+
+.page {
+  padding: theme.$spacing-small;
 }
