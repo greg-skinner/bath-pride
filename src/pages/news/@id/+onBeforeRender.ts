@@ -5,9 +5,7 @@ export const onBeforeRender = (pageContext: PageContextBuiltIn) => ({
   pageContext: {
     pageProps: {
       article: news.find(
-        (item) =>
-          pageContext.routeParams.id.slice(0, 10) ===
-          newsSlug(item).slice(0, 10)
+        (item) => pageContext.routeParams.id.slice(0, 10) === newsSlug(item)
       ),
     },
   },

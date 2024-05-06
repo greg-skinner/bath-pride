@@ -28,11 +28,7 @@ export const news = Object.values(newsImport)
   .map((item) => item.default)
   .sort((a, b) => b.date.localeCompare(a.date));
 
-export const newsSlug = (article: IArticle) =>
-  `${article.date}-${article.title
-    .replace(/[^ a-zA-Z]/g, '')
-    .replace(/ /g, '-')
-    .slice(0, 28)}`;
+export const newsSlug = (article: IArticle) => article.date;
 
 // STATIC
 
