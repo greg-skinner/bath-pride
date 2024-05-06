@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - src/**
+      - vite.config.ts
 permissions:
   contents: write
 jobs:
