@@ -6,10 +6,6 @@ import { IArticle } from '@renderer/news.types';
 import { PageProps } from '@renderer/types';
 
 export const Page = ({ article }: { article: IArticle }) => {
-  if (!article) {
-    return null;
-  }
-
   if (article.type === 'standard') {
     return (
       <StandardPage
