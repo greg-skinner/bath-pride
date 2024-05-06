@@ -42,7 +42,7 @@ export const StandardPage: React.FC<IStandardPageProps> = ({
     }
 
     return {
-      '--grid-start': String(index + (index === 0 ? 1 : 2)),
+      '--grid-start': String(index + (index === 0 && title ? 1 : 2)),
       '--grid-end': String(end + 2),
     };
   };

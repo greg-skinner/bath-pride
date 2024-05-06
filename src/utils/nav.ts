@@ -44,10 +44,13 @@ const contentImport: Record<string, { Page: Page }> = import.meta.glob(
 );
 
 const sortOrder = [
-  'events',
+  'bath-pride-2024',
   'news',
   'our-partners',
   'about-us',
+  'Family Picnic',
+  'Pride March',
+  'WIG!',
   'Our Team',
   'Our Values',
   'Governance',

@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { Link } from '@components/link/link';
 import { parseText } from '@utils';
 
 import styles from './renderText.module.scss';
@@ -36,6 +37,19 @@ export const RenderText: React.FC<IRenderTextProps> = ({
           ))}
         </ul>
         {parseText(list[list.length - 1], styles)}
+      </div>
+    );
+  }
+
+  if (text.indexOf('@') > -1) {
+    const list = text.split(/ ?@ ?/);
+
+    return (
+      <div className={classNames(className)} style={cssVar}>
+        {parseText(list[0], styles)}{' '}
+        <Link href={list[1]}>{parseText(list[2], styles)}</Link>
+        {list[3][0]?.match(/[a-zA-Z]/) ? ' ' : ''}
+        {parseText(list[3], styles)}
       </div>
     );
   }

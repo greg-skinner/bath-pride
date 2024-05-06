@@ -1,0 +1,43 @@
+@use '@theme/mixins';
+@use '@theme/theme';
+
+.content {
+  display: grid;
+  width: 100%;
+  grid-template-areas: 'image title date' 'image . location' 'image description description';
+  margin-top: theme.$spacing-large;
+  grid-template-columns: 6rem 1fr 1fr;
+  column-gap: theme.$spacing-large;
+
+  &.no-img {
+    grid-template-columns: 0 1fr 1fr;
+    column-gap: 0;
+  }
+
+  .image {
+    grid-area: image;
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .title {
+    grid-area: title;
+
+    @include mixins.title();
+    font-size: theme.$font-extra-large;
+  }
+
+  .date {
+    grid-area: date;
+    text-align: right;
+  }
+
+  .location {
+    grid-area: location;
+    text-align: right;
+  }
+
+  .description {
+    grid-area: description;
+  }
+}

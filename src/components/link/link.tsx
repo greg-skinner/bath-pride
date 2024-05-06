@@ -17,7 +17,11 @@ export const Link: React.FC<React.PropsWithChildren<ILinkProps>> = ({
 }) => (
   <a
     className={classNames(className, { [styles.link]: !menuLink })}
-    href={`${APP_CONFIG.BASE_URL}${href === '/' ? '' : href}`}
+    href={
+      href.indexOf('http') < 0
+        ? `${APP_CONFIG.BASE_URL}${href === '/' ? '' : href}`
+        : href
+    }
   >
     {children}
   </a>
