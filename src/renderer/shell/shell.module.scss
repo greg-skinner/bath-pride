@@ -37,6 +37,7 @@
     grid-area: page;
     max-width: mixins.$mobile-breakpoint;
     padding: theme.$spacing-small;
+    justify-self: center;
 
     @include mixins.mobile {
       padding: 0;
