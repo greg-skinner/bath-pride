@@ -73,9 +73,7 @@ export default ({ mode }) => {
         GIT_HASH: commitHash,
         BASE_URL: base,
         MODE: mode,
-        HOST: isDevelopment
-          ? 'localhost:3069'
-          : 'https://greg-skinner.github.io',
+        HOST: isDevelopment ? 'localhost:3069' : 'https://www.bathpride.org',
       },
     },
   });
