@@ -21,6 +21,8 @@
     display: flex;
     flex-direction: column;
 
+    max-height: 401px;
+
     @include mixins.mobile {
       height: 44dvw;
     }
@@ -48,6 +50,7 @@
       object-fit: cover;
       height: 48dvh;
       min-height: 350px;
+      max-height: 401px;
 
       @include mixins.mobile {
         height: 44dvw;
