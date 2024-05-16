@@ -29,16 +29,18 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
                   [styles.local]: link.local,
                 })}
               >
-                {news.map((article) => (
-                  <Link
-                    menuLink
-                    className={styles.child}
-                    key={newsSlug(article)}
-                    href={`news/${newsSlug(article)}`}
-                  >
-                    {article.title}
-                  </Link>
-                ))}
+                {news
+                  .filter((item) => item.type !== 'press-release')
+                  .map((article) => (
+                    <Link
+                      menuLink
+                      className={styles.child}
+                      key={newsSlug(article)}
+                      href={`news/${newsSlug(article)}`}
+                    >
+                      {article.title}
+                    </Link>
+                  ))}
               </div>
             </div>
           );

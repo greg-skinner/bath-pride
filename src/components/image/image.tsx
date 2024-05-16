@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 export interface IImageProps {
   className?: string;
-  cssVar: { [index: string]: string };
+  cssVar?: { [index: string]: string };
   dataLine: string;
   folder: string;
 }

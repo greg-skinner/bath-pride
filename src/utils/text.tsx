@@ -1,23 +1,62 @@
 import React from 'react';
 
+import { Link } from '@components/link/link';
+
 export const parseText = (
   text: string,
-  styles: CSSModuleClasses
+  styles: CSSModuleClasses,
+  partial: React.ReactNode[] = []
 ): React.ReactNode[] => {
-  const output: React.ReactNode[] = [];
+  const output: React.ReactNode[] = partial;
 
-  const fragments = text.split('`');
-  fragments.forEach((fragment, index) =>
+  const mode = /[`=]/g.exec(text);
+
+  if (!mode) {
+    return [
+      ...output,
+      <React.Fragment key={output.length}>{text}</React.Fragment>,
+    ];
+  }
+
+  if (mode[0] === '`') {
     output.push(
-      index % 2 ? (
-        <span className={styles.mono} key={index}>
-          {fragment}
-        </span>
-      ) : (
-        <React.Fragment key={index}>{fragment}</React.Fragment>
-      )
-    )
-  );
+      <React.Fragment key={output.length}>
+        {text.slice(0, mode.index)}
+      </React.Fragment>
+    );
 
-  return output;
+    output.push(
+      <span className={styles.mono} key={output.length}>
+        {text.slice(mode.index, text.slice(mode.index).indexOf('`'))}
+      </span>
+    );
+
+    return parseText(
+      text.slice(text.slice(mode.index).indexOf('`')),
+      styles,
+      output
+    );
+  }
+
+  if (mode[0] === '=') {
+    output.push(
+      <React.Fragment key={output.length}>
+        {text.slice(0, mode.index)}
+      </React.Fragment>
+    );
+
+    const link = /= (.*?) = (.*?) =(.*)/.exec(text.slice(mode.index));
+
+    if (link) {
+      output.push(
+        <Link href={link[1]} key={output.length}>
+          {link[2]}
+        </Link>
+      );
+
+      return parseText(link[3], styles, output);
+    }
+  }
+
+  return [...partial];
 };
