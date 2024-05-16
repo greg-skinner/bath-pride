@@ -22,6 +22,12 @@ export const Page: React.FC = () => (
         title={'The Holburne Museum'}
         link={'https://www.holburne.org/'}
       />
+      <PartnerBubble
+        accent={3}
+        img={"@Komedia.jpg::Komedia's logo"}
+        title={'Komedia'}
+        link={'https://komediabath.co.uk/'}
+      />
     </div>
   </div>
 );
