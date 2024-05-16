@@ -19,7 +19,7 @@ export const Page: React.FC = () => (
       content={content}
       date={''}
       title={'Our Values'}
-      folder="images"
+      folder="values"
     />
   </div>
 );
