@@ -1,13 +1,9 @@
 import * as React from 'react';
 import { InstagramEmbed } from 'react-social-media-embed';
 
-import _carouselData from '@assets/carousel/carousel.json';
 import { Carousel } from '@components/carousel';
-import { ICarousel } from '@components/carousel/carousel.type';
 
 import styles from './index.module.scss';
-
-const carouselData: ICarousel = _carouselData;
 
 export const Page: React.FC = () => (
   <div>
@@ -35,5 +31,5 @@ export const Page: React.FC = () => (
 export const documentProps = {
   description:
     'Bath Pride is finally coming to Bath as its own distinct event. Together, with you, we are going to make a pride we can all be proud of.',
-  img: carouselData[0].file,
+  img: 'carousel/stay-tuned.jpg',
 };

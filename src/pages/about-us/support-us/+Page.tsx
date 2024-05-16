@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { BulletPage } from '@components/bulletPage/bulletPage';
 
-import _content from './ourTeam.json';
+import _content from './supportUs.json';
 
 import styles from './index.module.scss';
 
@@ -21,7 +21,8 @@ export const Page: React.FC = () => (
 );
 
 export const documentProps = {
-  title: 'Our Team',
-  description: 'Our team of volunteers, working hard to deliver Bath Pride.',
+  title: 'Support us',
+  description:
+    'Bath Pride can only operate with the support from our local community. If you are able to, we would appreciate your time or money to help us make Bath a more inclusive and welcoming city for the LGBT+ community.',
   img: 'carousel/stay-tuned.jpg',
 };
