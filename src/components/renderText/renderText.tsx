@@ -25,7 +25,7 @@ export const RenderText: React.FC<IRenderTextProps> = ({
     );
   }
 
-  if (text.indexOf('=') > -1) {
+  if (text.indexOf('*') > -1) {
     const list = text.split(/ ?\* ?/);
 
     return (
