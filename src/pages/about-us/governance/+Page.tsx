@@ -1,13 +1,9 @@
 import * as React from 'react';
 
-import _carouselData from '@assets/carousel/carousel.json';
-import { ICarousel } from '@components/carousel/carousel.type';
 import { Link } from '@components/link/link';
 import { NewsTitle } from '@components/newsTitle';
 
 import styles from './index.module.scss';
-
-const carouselData: ICarousel = _carouselData;
 
 export const Page: React.FC = () => (
   <div className={styles.page}>
@@ -158,5 +154,5 @@ export const documentProps = {
   title: 'Governance',
   description:
     'Bath Pride is a registered charity and we exist to undertake our charitable objects. This page contains what our purpose is, ourconstitution, and our policies.',
-  img: carouselData[0].file,
+  img: 'carousel/stay-tuned.jpg',
 };

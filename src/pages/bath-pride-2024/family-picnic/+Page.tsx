@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { Accessibility } from '@components/accessibility';
 import { EventTitle } from '@components/eventTitle';
 import { StandardPage } from '@components/standardPage';
 
@@ -20,7 +21,29 @@ export const Page: React.FC = () => (
         'A chance to sit, relax and listen to some live local music.'
       }
     />
-    <StandardPage folder={'images'} content={content} date={''} title={''} />
+    <StandardPage
+      folder={'images'}
+      content={content}
+      date={''}
+      title={''}
+      inject={{
+        0: (
+          <Accessibility
+            options={{
+              parking: 'Blue badge car parking',
+              lifts: 'Lifts inside the museum',
+              'level-access': 'Level access throughout',
+              toilets: 'Accessible toilets',
+              seating: 'Inside & outside seating',
+              wheelchairs: 'Wheelchairs available',
+              'assistance-dogs': 'Assistance dogs welcome',
+              'hearing-loop': 'Hearing loop in museum',
+            }}
+            link={'https://www.holburne.org/planning-your-visit/accessibility/'}
+          />
+        ),
+      }}
+    />
   </div>
 );
 

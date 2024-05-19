@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { InstagramEmbed } from 'react-social-media-embed';
 
+import { Accessibility } from '@components/accessibility';
 import { EventTitle } from '@components/eventTitle';
 import { StandardPage } from '@components/standardPage';
 
@@ -19,7 +20,28 @@ export const Page: React.FC = () => (
       location={'Komedia'}
       description={'The Official Bath Pride 2024 after party'}
     />
-    <StandardPage folder={'images'} content={content} date={''} title={''} />
+    <StandardPage
+      folder={'images'}
+      content={content}
+      date={''}
+      title={''}
+      inject={{
+        0: (
+          <Accessibility
+            options={{
+              'level-access': 'Level access to the show',
+              toilets: 'Accessible and gender-neutral toilets',
+              seating: 'Seating provided',
+              'assistance-dogs': 'Assistance dogs welcome',
+              'assistant-ticket':
+                'Complimentary ticket for a personal assistant',
+              parking: 'Provision for blue badge holder parking',
+            }}
+            link={'https://komediabath.co.uk/plan-your-visit/accessibility/'}
+          />
+        ),
+      }}
+    />
     <InstagramEmbed
       url="https://www.instagram.com/wigbath/"
       width={'100%'}

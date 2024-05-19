@@ -10,6 +10,14 @@ export const Page: React.FC = () => (
       Bath Pride is a registered charity. Everything we do is aimed towards
       bringing the local LGBT+ community through events and campaigns.
     </div>
+    <Link className={styles.link} href="about-us/support-us">
+      Support us
+    </Link>
+    <div>
+      We are a charity, and require the support of people to volunteer and
+      donate to enable us to function. Find out how you can support us to
+      continue our work and make Bath a more inclusive and accepting city.
+    </div>
     <Link className={styles.link} href="about-us/governance">
       Governance
     </Link>
@@ -41,6 +49,30 @@ export const Page: React.FC = () => (
       </a>
       . Remember that we are all volunteers so it may take some time to get back
       to you, but we will respond as quickly as we can.
+    </div>
+    <div className={styles.header}>Acknowledgements</div>
+    <div>
+      Some icons on this website are by{' '}
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://www.freepik.com/icon/guide-dog_1512681"
+      >
+        Smashicons
+      </a>
+      ,{' '}
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://thenounproject.com/icon/hearing-loop-28162/"
+      >
+        Hadi Davodpour from Noun Project
+      </a>{' '}
+      and{' '}
+      <a target="_blank" rel="noreferrer" href="https://uxwing.com/">
+        uxwing
+      </a>
+      , and are used under Creative Commons licenses.
     </div>
   </div>
 );

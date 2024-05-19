@@ -47,6 +47,7 @@ const sortOrder = [
   'Family Picnic',
   'Pride March',
   'WIG!',
+  'Support Us',
   'Our Team',
   'Our Values',
   'Governance',

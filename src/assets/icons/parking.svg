@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="585" height="585" overflow="visible" xml:space="preserve" style="overflow:visible">
+    <rect style="fill:#00f;fill-opacity:1;stroke:#fff;stroke-width:14.625;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" width="570.375" height="570.375" x="7.313" y="7.313" ry="60.305"/>
+    <g clip-rule="evenodd">
+        <path style="fill:#fff;fill-rule:evenodd" d="M212.877 114.909c24.963-2.305 44.357-23.811 44.357-48.966 0-27.075-22.083-49.158-49.158-49.158-27.075 0-49.157 22.083-49.157 49.158 0 8.257 2.304 16.705 6.144 23.81L182.58 336.22l180.397.049 73.99 173.365 97.145-38.097-15.043-35.82-54.366 19.624-71.59-165.28-167.73 1.127-2.303-31.213 121.423.048V213.84l-126.055-.049-5.57-98.882z" transform="translate(27.28 27.28) scale(.90673)"/>
+        <path style="fill:#fff;fill-rule:evenodd" d="M394.309 468.375c-30.448 60.188-94.175 99.84-162.15 99.84-99.84 0-181.27-81.43-181.27-181.27 0-70.1 42.485-135.243 105.882-164.12l4.102 53.537c-37.497 23.629-60.612 66.263-60.612 110.951 0 72.427 59.071 131.497 131.497 131.497 66.262 0 122.764-50.851 130.47-116.087l32.08 65.652z" transform="translate(27.28 27.28) scale(.90673)"/>
+    </g>
+</svg>

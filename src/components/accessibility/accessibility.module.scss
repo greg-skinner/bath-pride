@@ -1,0 +1,51 @@
+@use '@theme/theme';
+
+.icon {
+  height: theme.$font-very-large;
+  width: theme.$font-very-large;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin: theme.$spacing-smaller theme.$spacing-neutral theme.$spacing-smaller
+    theme.$spacing-smaller;
+}
+
+.content {
+  margin-top: theme.$spacing-neutral;
+  display: block;
+  padding: theme.$spacing-smaller;
+  width: 100%;
+  border-radius: theme.$spacing-small;
+  border: theme.$stone-border theme.$spacing-smaller solid;
+  box-sizing: border-box;
+  background: theme.$stone;
+
+  .header {
+    display: grid;
+    grid-template-columns: '.' '.';
+  }
+
+  .title {
+    font-size: theme.$font-header;
+    font-weight: theme.$extra-bold;
+    text-align: left;
+  }
+
+  .sub-head {
+    font-weight: theme.$extra-bold;
+    text-align: left;
+    grid-column: 1;
+  }
+
+  .link {
+    grid-row: 1;
+    grid-column: 2;
+    text-align: right;
+    font-size: theme.$font-smaller;
+  }
+
+  .entry {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}

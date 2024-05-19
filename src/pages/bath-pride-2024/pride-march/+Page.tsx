@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { Accessibility } from '@components/accessibility';
 import { EventTitle } from '@components/eventTitle';
 import { StandardPage } from '@components/standardPage';
 
@@ -18,7 +19,21 @@ export const Page: React.FC = () => (
       location={'location to be confirmed'}
       description={'Pride March through the city, pride is a protest!'}
     />
-    <StandardPage folder={'images'} content={content} date={''} title={''} />
+    <StandardPage
+      folder={'images'}
+      content={content}
+      date={''}
+      title={''}
+      inject={{
+        0: (
+          <Accessibility
+            options={{}}
+            link={''}
+            copy="We are still in the planning process and will be able to provide more accessibility information closer to the event."
+          />
+        ),
+      }}
+    />
   </div>
 );
 
