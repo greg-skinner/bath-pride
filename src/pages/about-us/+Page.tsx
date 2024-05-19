@@ -10,6 +10,14 @@ export const Page: React.FC = () => (
       Bath Pride is a registered charity. Everything we do is aimed towards
       bringing the local LGBT+ community through events and campaigns.
     </div>
+    <Link className={styles.link} href="about-us/support-us">
+      Support us
+    </Link>
+    <div>
+      We are a charity, and require the support of people to volunteer and
+      donate to enable us to function. Find out how you can support us to
+      continue our work and make Bath a more inclusive and accepting city.
+    </div>
     <Link className={styles.link} href="about-us/governance">
       Governance
     </Link>
