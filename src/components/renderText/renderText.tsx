@@ -41,19 +41,6 @@ export const RenderText: React.FC<IRenderTextProps> = ({
     );
   }
 
-  if (text.indexOf('@') > -1) {
-    const list = text.split(/ ?@ ?/);
-
-    return (
-      <div className={classNames(className)} style={cssVar}>
-        {parseText(list[0], styles)}{' '}
-        <Link href={list[1]}>{parseText(list[2], styles)}</Link>
-        {list[3][0]?.match(/[a-zA-Z]/) ? ' ' : ''}
-        {parseText(list[3], styles)}
-      </div>
-    );
-  }
-
   return (
     <div className={classNames(className)} style={cssVar}>
       {parseText(text, styles)}
