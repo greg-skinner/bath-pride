@@ -50,6 +50,30 @@ export const Page: React.FC = () => (
       . Remember that we are all volunteers so it may take some time to get back
       to you, but we will respond as quickly as we can.
     </div>
+    <div className={styles.header}>Acknowledgements</div>
+    <div>
+      Some icons on this website are by{' '}
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://www.freepik.com/icon/guide-dog_1512681"
+      >
+        Smashicons
+      </a>
+      ,{' '}
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://thenounproject.com/icon/hearing-loop-28162/"
+      >
+        Hadi Davodpour from Noun Project
+      </a>{' '}
+      and{' '}
+      <a target="_blank" rel="noreferrer" href="https://uxwing.com/">
+        uxwing
+      </a>
+      , and are used under Creative Commons licenses.
+    </div>
   </div>
 );
 

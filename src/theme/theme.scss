@@ -2,6 +2,7 @@
 
 $white: white;
 $stone: #f0e7df;
+$stone-border: color.adjust($stone, $lightness: -10%);
 $text: #252526;
 $red: #ce2624;
 $orange: #ec681c;

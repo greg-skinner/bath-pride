@@ -13,6 +13,7 @@ export interface IStandardPageProps {
   date: string;
   folder?: string;
   title: string;
+  inject?: { [key: number]: React.ReactNode };
 }
 
 export const StandardPage: React.FC<IStandardPageProps> = ({
@@ -21,6 +22,7 @@ export const StandardPage: React.FC<IStandardPageProps> = ({
   date,
   folder,
   title,
+  inject,
 }) => {
   const text: string[] = [];
   const images: { [index: number]: string } = {};
@@ -60,12 +62,17 @@ export const StandardPage: React.FC<IStandardPageProps> = ({
             text={item}
           />
           {images[index] && (
-            <Image
-              className={classNames(styles.image)}
-              dataLine={images[index]}
-              cssVar={createCssVars(index)}
-              folder={folder || 'news'}
-            />
+            <div
+              className={styles.image}
+              style={createCssVars(index) as React.CSSProperties}
+            >
+              <Image
+                dataLine={images[index]}
+                cssVar={createCssVars(index)}
+                folder={folder || 'news'}
+              />
+              {inject && inject[index]}
+            </div>
           )}
         </React.Fragment>
       ))}
