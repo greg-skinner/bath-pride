@@ -11,10 +11,10 @@ const content: string[] = _content;
 export const Page: React.FC = () => (
   <div>
     <BulletPage
-      className={styles.team}
+      className={styles.support}
       content={content}
       date={''}
-      title={'Our Team'}
+      title={'Support Us'}
       folder="images"
     />
   </div>
