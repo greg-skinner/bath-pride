@@ -1,8 +1,18 @@
 [
   {
-    "file": "carousel/stay-tuned.jpg",
-    "alt": "Stay tuned! Bath Pride is coming",
-    "action": "bath-pride-2024"
+    "file": "carousel/picnic.jpg",
+    "alt": "Bath Pride family picnic",
+    "action": "bath-pride-2024/picnic"
+  },
+  {
+    "file": "carousel/march.jpg",
+    "alt": "Bath Pride march",
+    "action": "bath-pride-2024/pride-march"
+  },
+  {
+    "file": "carousel/wig.jpg",
+    "alt": "Bath Pride afterparty - WIG!",
+    "action": "bath-pride-2024/wig"
   },
   {
     "file": "news/read-article.jpg",
