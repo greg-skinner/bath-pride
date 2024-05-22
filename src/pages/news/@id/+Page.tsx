@@ -6,11 +6,14 @@ import { StandardPage } from '@components/standardPage';
 import { IArticle } from '@renderer/news.types';
 import { PageProps } from '@renderer/types';
 
+import styles from '../news.module.scss';
+
 export const Page = ({ article }: { article: IArticle }) => {
   switch (article.type) {
     case 'press-release':
       return (
         <PressRelease
+          className={styles.articles}
           content={article.content}
           title={article.title}
           date={article.date}
@@ -20,6 +23,7 @@ export const Page = ({ article }: { article: IArticle }) => {
     case 'standard':
       return (
         <StandardPage
+          className={styles.articles}
           content={article.content}
           title={article.title}
           date={article.date}
@@ -29,6 +33,7 @@ export const Page = ({ article }: { article: IArticle }) => {
     case 'bullet':
       return (
         <BulletPage
+          className={styles.articles}
           content={article.content}
           title={article.title}
           date={article.date}

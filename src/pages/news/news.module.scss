@@ -2,6 +2,7 @@
 @use '@theme/mixins';
 
 .articles {
+  margin: theme.$spacing-small;
   ul {
     list-style-type: none;
   }
