@@ -16,5 +16,6 @@
   .date {
     font-size: theme.$font-smaller;
     margin-right: theme.$spacing-smaller;
+    flex-shrink: 0;
   }
 }

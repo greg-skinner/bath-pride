@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-import { Link } from '@components/link/link';
 import { parseText } from '@utils';
 
 import styles from './renderText.module.scss';
@@ -20,8 +19,16 @@ export const RenderText: React.FC<IRenderTextProps> = ({
   if (text[0] === '#') {
     return (
       <h3 className={classNames(className)} style={cssVar}>
-        {text.slice(2)}
+        {parseText(text.slice(2), styles)}
       </h3>
+    );
+  }
+
+  if (text[0] === '/') {
+    return (
+      <div className={classNames(className, styles.italic)} style={cssVar}>
+        {parseText(text.slice(2), styles)}
+      </div>
     );
   }
 

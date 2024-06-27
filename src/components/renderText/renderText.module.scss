@@ -4,3 +4,7 @@
 .mono {
   @include mixins.monotype;
 }
+
+.italic {
+  font-style: italic;
+}
