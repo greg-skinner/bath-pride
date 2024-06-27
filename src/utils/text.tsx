@@ -60,3 +60,39 @@ export const parseText = (
 
   return [...partial];
 };
+
+export const flattenText = (text = '', partial = ''): string => {
+  if (text[0] === '/' || text[0] === '#') {
+    return flattenText(text.slice(2));
+  }
+
+  const mode = /[`=]/g.exec(text);
+
+  if (!mode) {
+    return partial + text;
+  }
+
+  let output = partial;
+
+  if (mode[0] === '`') {
+    output += text.slice(0, mode.index);
+
+    output += text.slice(mode.index, text.slice(mode.index).indexOf('`'));
+
+    return flattenText(text.slice(text.slice(mode.index).indexOf('`')), output);
+  }
+
+  if (mode[0] === '=') {
+    output += text.slice(0, mode.index);
+
+    const link = /= (.*?) = (.*?) =(.*)/.exec(text.slice(mode.index));
+
+    if (link) {
+      output += link[2];
+
+      return flattenText(link[3], output);
+    }
+  }
+
+  return partial + text;
+};

@@ -4,9 +4,10 @@ import { BulletPage } from '@components/bulletPage/bulletPage';
 import { PressRelease } from '@components/pressRelease';
 import { StandardPage } from '@components/standardPage';
 import { IArticle } from '@renderer/news.types';
-import { PageProps } from '@renderer/types';
+import { IMetaData, PageProps } from '@renderer/types';
 
 import styles from '../news.module.scss';
+import { flattenText } from '@utils';
 
 export const Page = ({ article }: { article: IArticle }) => {
   switch (article.type) {
@@ -51,7 +52,17 @@ export const Page = ({ article }: { article: IArticle }) => {
   }
 };
 
-export const getDocumentProps = (pageProps: PageProps) => ({
+export const getDocumentProps = (pageProps: PageProps): IMetaData => ({
   title: pageProps.article?.title,
-  description: '',
+  description: flattenText(
+    pageProps.article?.content.filter((item) => item[0] !== '@')[0]
+  ),
+  img: `assets/news/${pageProps.article?.content
+    .filter((item) => item[0] === '@')[0]
+    .slice(1)
+    .split(':')[0]}`,
+  alt: pageProps.article?.content
+    .filter((item) => item[0] === '@')[0]
+    .slice(1)
+    .split(':')[2],
 });
