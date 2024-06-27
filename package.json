@@ -16,7 +16,7 @@
     "lint:prettier:fix": "prettier --config .prettierrc.json --write **/*.tsx **/*.ts",
     "lint:stylelint": "stylelint **/*.scss",
     "lint:stylelint:fix": "stylelint **/*.scss --fix",
-    "start": "vite dev",
+    "start": "vite dev --host",
     "serve": "vite preview"
   },
   "author": "Greg Skinner",
