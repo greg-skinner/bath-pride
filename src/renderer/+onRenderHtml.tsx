@@ -41,6 +41,8 @@ export const onRenderHtml = async (pageContext: PageContextServer) => {
   const img = getMetaData('img', 'images/logo_stone.png');
   const alt = getMetaData('alt', 'Bath Pride logo');
 
+  const pageTitle = `${title ? `${title} - ` : ''}Bath Pride`;
+
   const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang="en">
       <head>
@@ -51,12 +53,12 @@ export const onRenderHtml = async (pageContext: PageContextServer) => {
           APP_CONFIG.BASE_URL
         }images/icon.png" />
         <meta name="description" content="${desc}" />
-        <title>${`${title ? `${title} - ` : ''}Bath Pride`}</title>
+        <title>${pageTitle}</title>
         <meta name="subject" content="Bath Pride">
         <meta name="rating" content="General">
         <meta name="referrer" content="no-referrer">
         <meta property="og:site_name" content="Bath Pride">
-        <meta property="og:title" content="${title || 'Bath Pride'}" />
+        <meta property="og:title" content="${pageTitle}" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content="${desc}" />
         <meta property="og:image" content="${APP_CONFIG.HOST}${
