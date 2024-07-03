@@ -26,6 +26,7 @@ const newsImport: Record<string, { default: IArticle }> = import.meta.glob(
 
 export const news = Object.values(newsImport)
   .map((item) => item.default)
+  .filter((item) => new Date(item.date).getTime() < new Date().getTime())
   .sort((a, b) => b.date.localeCompare(a.date));
 
 export const newsSlug = (article: IArticle) => article.date;
@@ -79,6 +80,7 @@ export const menuKeys = (local?: string): IMenuLink[] => {
   pages
     .filter((key) => key.search('@') < 0)
     .filter((key) => key.search('_') < 0)
+    .filter((key) => key.search('qr-code') < 0)
     .sort((a, b) =>
       // eslint-disable-next-line no-nested-ternary -- sort logic
       a === '/' ? -1 : b === '/' ? 1 : menuSort(a, b)
