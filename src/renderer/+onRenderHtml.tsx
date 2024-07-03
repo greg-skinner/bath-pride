@@ -40,6 +40,7 @@ export const onRenderHtml = async (pageContext: PageContextServer) => {
   const desc = getMetaData('description', 'Bath Pride');
   const img = getMetaData('img', 'images/logo_stone.png');
   const alt = getMetaData('alt', 'Bath Pride logo');
+  const redirect = getMetaData('redirectUrl', '');
 
   const pageTitle = `${title ? `${title} - ` : ''}Bath Pride`;
 
@@ -49,6 +50,12 @@ export const onRenderHtml = async (pageContext: PageContextServer) => {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="google" content="nositelinkssearchbox">
+        ${
+          redirect
+            ? escapeInject`<meta http-equiv="refresh" content="0; URL=${redirect}">
+        <link rel="canonical" href="${redirect}">`
+            : ''
+        }
         <link rel="icon" sizes="192x192" href="${
           APP_CONFIG.BASE_URL
         }images/icon.png" />
