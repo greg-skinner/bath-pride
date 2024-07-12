@@ -1,0 +1,94 @@
+@use '@theme/theme';
+@use '@theme/mixins';
+@use 'sass:map';
+
+.carousel {
+  @include mixins.banner();
+  --swiper-navigation-top-offset: 45%;
+  --swiper-theme-color: #fff;
+  --swiper-pagination-bottom: 0px;
+  --swiper-pagination-color: #f0e7df;
+
+  @include mixins.mobile {
+    --swiper-navigation-top-offset: 50%;
+    --swiper-pagination-bottom: 0px;
+  }
+
+  height: 100%;
+  overflow: hidden;
+
+  .carousel-page {
+    width: 100%;
+    color: theme.$white;
+    display: flex;
+    flex-direction: column;
+
+    @include mixins.mobile {
+      height: 44dvw;
+    }
+
+    &.content {
+      @include mixins.mobile {
+        height: 62dvw;
+      }
+    }
+
+    @each $index, $colour in theme.$accents {
+      &[data-index='#{$index}'] {
+        .header {
+          background: map.get(theme.$accents, $index % 9);
+        }
+      }
+    }
+
+    .image-container {
+      position: relative;
+    }
+
+    img {
+      @include mixins.banner();
+      object-fit: cover;
+      // height: 48dvh;
+
+      @include mixins.mobile {
+        height: 44dvw;
+        min-height: unset;
+      }
+      margin-bottom: 0.75rem;
+    }
+
+    .header {
+      position: absolute;
+      bottom: 0;
+      width: fit-content;
+      font-size: theme.$font-header;
+      border-radius: theme.$spacing-small;
+      padding: theme.$spacing-small theme.$spacing-padding theme.$spacing-small
+        theme.$spacing-small;
+
+      @include mixins.desktop {
+        padding: theme.$spacing-small theme.$spacing-padding
+          theme.$spacing-small theme.$spacing-large;
+      }
+
+      span {
+        font-weight: theme.$extra-bold;
+      }
+    }
+
+    .description {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: theme.$spacing-small;
+      padding-top: theme.$spacing-neutral;
+      background: theme.$stone;
+      color: theme.$text;
+
+      @include mixins.desktop {
+        padding: theme.$spacing-large;
+      }
+    }
+  }
+}

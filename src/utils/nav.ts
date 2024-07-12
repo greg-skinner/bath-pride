@@ -1,5 +1,6 @@
 import { IArticle } from '@renderer/news.types';
 import { Page } from '@renderer/types';
+import { addDays, isBefore } from 'date-fns';
 
 import { urlToLink } from './urls';
 
@@ -26,7 +27,7 @@ const newsImport: Record<string, { default: IArticle }> = import.meta.glob(
 
 export const news = Object.values(newsImport)
   .map((item) => item.default)
-  .filter((item) => new Date(item.date).getTime() < new Date().getTime())
+  .filter((item) => isBefore(item.date, addDays(new Date(), 1)))
   .sort((a, b) => b.date.localeCompare(a.date));
 
 export const newsSlug = (article: IArticle) => article.date;

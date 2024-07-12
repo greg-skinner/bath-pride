@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Link } from '@components/link/link';
 import { news, newsSlug } from '@utils';
-import { format } from 'date-fns';
+import { addDays, format, isBefore } from 'date-fns';
 
 import styles from './news.module.scss';
 
@@ -12,7 +12,7 @@ export const Page: React.FC = () => (
     <ul>
       {news.map(
         (article) =>
-          new Date(article.date).getTime() < new Date().getTime() && (
+          isBefore(article.date, addDays(new Date(), 1)) && (
             <li key={newsSlug(article)}>
               <Link href={`news/${newsSlug(article)}`}>
                 {format(article.date, 'do MMMM y')} - {article.title}
