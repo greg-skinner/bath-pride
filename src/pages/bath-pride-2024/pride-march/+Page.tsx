@@ -1,7 +1,6 @@
 import * as React from 'react';
 
 import { Accessibility } from '@components/accessibility';
-import { MarchCarousel } from '@components/carousel';
 import { EventTitle } from '@components/eventTitle';
 import { StandardPage } from '@components/standardPage';
 
@@ -35,7 +34,6 @@ export const Page: React.FC = () => (
         ),
       }}
     />
-    <MarchCarousel className={styles.carousel} />
   </div>
 );
 

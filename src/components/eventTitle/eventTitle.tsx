@@ -13,8 +13,8 @@ export interface IEventTitleProps {
   img?: string;
   date: Date;
   time?: [Date, Date | string];
-  location: string;
-  description: string;
+  location?: string;
+  description?: string;
   link?: string;
 }
 

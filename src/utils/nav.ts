@@ -1,5 +1,5 @@
 import { IArticle } from '@renderer/news.types';
-import { Page } from '@renderer/types';
+import { IMetaData, Page } from '@renderer/types';
 import { addDays, isBefore } from 'date-fns';
 
 import { urlToLink } from './urls';
@@ -34,12 +34,10 @@ export const newsSlug = (article: IArticle) => article.date;
 
 // STATIC
 
-const contentImport: Record<string, { Page: Page }> = import.meta.glob(
-  '../pages/**/+Page.tsx',
-  {
+const contentImport: Record<string, { Page: Page; documentProps: IMetaData }> =
+  import.meta.glob('../pages/**/+Page.tsx', {
     eager: true,
-  }
-);
+  });
 
 const sortOrder = [
   'bath-pride-2024',
@@ -74,11 +72,11 @@ const menuSort = (a: string, b: string) => {
 };
 
 export const menuKeys = (local?: string): IMenuLink[] => {
-  const pages = Object.keys(contentImport).map((file) => file.slice(9, -10));
-
   const links: IMenuLink[] = [];
 
-  pages
+  Object.keys(contentImport)
+    .filter((key) => !contentImport[key].documentProps?.hidden)
+    .map((file) => file.slice(9, -10))
     .filter((key) => key.search('@') < 0)
     .filter((key) => key.search('_') < 0)
     .filter((key) => key.search('qr-code') < 0)
