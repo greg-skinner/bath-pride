@@ -51,6 +51,16 @@ export const Page: React.FC = () => (
         }
         link="bath-pride-2024/wig"
       />
+      <EventTitle
+        img={"@logo_stone.png::Bath Pride's logo"}
+        className={styles.event}
+        title={'Other Pride events'}
+        label={'Various dates'}
+        description={
+          "There's lots of other events across the city affiliate with Bath Pride - here's a selection"
+        }
+        link="bath-pride-2024/other-events"
+      />
     </div>
   </div>
 );

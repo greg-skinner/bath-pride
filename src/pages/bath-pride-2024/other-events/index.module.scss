@@ -1,0 +1,12 @@
+@use '@theme/theme.scss';
+
+.page {
+  padding: theme.$spacing-small;
+
+  ul {
+    margin-top: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: theme.$font-header;
+  }
+}
