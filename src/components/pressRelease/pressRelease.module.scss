@@ -1,6 +1,14 @@
 @use '@theme/mixins';
 @use '@theme/theme';
 
+.content ul {
+  list-style-type: disc;
+
+  li {
+    margin: theme.$spacing-smaller 0;
+  }
+}
+
 @include mixins.desktop {
   .content {
     display: grid;
