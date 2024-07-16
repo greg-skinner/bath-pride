@@ -25,17 +25,15 @@ export const parseText = (
       </React.Fragment>
     );
 
+    const endIndex = mode.index + text.slice(mode.index + 1).indexOf('`');
+
     output.push(
       <span className={styles.mono} key={output.length}>
-        {text.slice(mode.index, text.slice(mode.index).indexOf('`'))}
+        {text.slice(mode.index + 1, endIndex)}
       </span>
     );
 
-    return parseText(
-      text.slice(text.slice(mode.index).indexOf('`')),
-      styles,
-      output
-    );
+    return parseText(text.slice(endIndex + 2), styles, output);
   }
 
   if (mode[0] === '=') {

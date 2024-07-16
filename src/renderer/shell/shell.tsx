@@ -9,7 +9,10 @@ import styles from './shell.module.scss';
 
 export const Shell: React.FC<React.PropsWithChildren> = ({ children }) => (
   <div className={styles.shell}>
-    <Header className={styles.header} icon={'images/logo_white.png'} />
+    <Header
+      className={styles.header}
+      icon={'images/bath-pride-logo_transparent.png'}
+    />
     <div className={styles.page}>{children}</div>
     <Footer className={styles.footer} msg={'footer'} />
   </div>

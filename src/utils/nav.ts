@@ -1,5 +1,5 @@
 import { IArticle } from '@renderer/news.types';
-import { Page } from '@renderer/types';
+import { IMetaData, Page } from '@renderer/types';
 import { addDays, isBefore } from 'date-fns';
 
 import { urlToLink } from './urls';
@@ -12,7 +12,7 @@ export interface IMenuLink {
 }
 
 const makeMenuLink = (url: string): IMenuLink => ({
-  link: urlToLink(url),
+  link: contentImport[`../pages/${url}/+Page.tsx`].documentProps.title,
   url: url === 'index' ? '/' : url,
 });
 
@@ -34,13 +34,11 @@ export const newsSlug = (article: IArticle) => article.date;
 
 // STATIC
 
-const contentImport: Record<string, { Page: Page }> = import.meta.glob(
-  '../pages/**/+Page.tsx',
-  {
+const contentImport: Record<string, { Page: Page; documentProps: IMetaData }> =
+  import.meta.glob('../pages/**/+Page.tsx', {
     eager: true,
-  }
-);
-
+  });
+console.log(contentImport);
 const sortOrder = [
   'bath-pride-2024',
   'news',
@@ -53,6 +51,7 @@ const sortOrder = [
   'Our Team',
   'Our Values',
   'Governance',
+  'Press and Media',
 ];
 const menuSort = (a: string, b: string) => {
   const initial =
