@@ -50,6 +50,14 @@ export const Page: React.FC = () => (
       . Remember that we are all volunteers so it may take some time to get back
       to you, but we will respond as quickly as we can.
     </div>
+    <div>
+      If you are looking for{' '}
+      <Link className={''} href="about-us/media">
+        press or media assets
+      </Link>
+      , we have a selection of marketing assets, images for colour and logos
+      available for use.
+    </div>
     <div className={styles.header}>Acknowledgements</div>
     <div>
       Some icons on this website are by{' '}
