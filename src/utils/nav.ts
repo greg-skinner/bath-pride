@@ -12,7 +12,7 @@ export interface IMenuLink {
 }
 
 const makeMenuLink = (url: string): IMenuLink => ({
-  link: urlToLink(url),
+  link: contentImport[`../pages/${url}/+Page.tsx`].documentProps.title,
   url: url === 'index' ? '/' : url,
 });
 
@@ -51,6 +51,7 @@ const sortOrder = [
   'Our Team',
   'Our Values',
   'Governance',
+  'Press and Media',
 ];
 const menuSort = (a: string, b: string) => {
   const initial =

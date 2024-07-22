@@ -38,7 +38,7 @@ export const onRenderHtml = async (pageContext: PageContextServer) => {
 
   const title = getMetaData('title', '');
   const desc = getMetaData('description', 'Bath Pride');
-  const img = getMetaData('img', 'images/logo_stone.png');
+  const img = getMetaData('img', 'images/bath-pride-logo_stone.png');
   const alt = getMetaData('alt', 'Bath Pride logo');
   const redirect = getMetaData('redirectUrl', '');
 
