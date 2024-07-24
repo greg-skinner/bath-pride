@@ -16,6 +16,7 @@ export interface IMetaData {
   img?: string;
   alt?: string;
   redirectUrl?: string;
+  hidden?: boolean;
 }
 
 export type PageContextCustom = {

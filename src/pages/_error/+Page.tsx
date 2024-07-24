@@ -3,6 +3,8 @@ import * as React from 'react';
 import 'normalize.css';
 import '@renderer/globals.css';
 
+import { IMetaData } from '@renderer/types';
+
 export const Page = ({ is404 }: { is404: boolean }) => {
   if (is404) {
     return (
@@ -19,4 +21,8 @@ export const Page = ({ is404 }: { is404: boolean }) => {
       <p>Something went wrong.</p>
     </>
   );
+};
+
+export const documentProps: IMetaData = {
+  title: 'Error',
 };

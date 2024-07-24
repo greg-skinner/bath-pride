@@ -38,7 +38,7 @@ const contentImport: Record<string, { Page: Page; documentProps: IMetaData }> =
   import.meta.glob('../pages/**/+Page.tsx', {
     eager: true,
   });
-console.log(contentImport);
+
 const sortOrder = [
   'bath-pride-2024',
   'news',
@@ -73,11 +73,11 @@ const menuSort = (a: string, b: string) => {
 };
 
 export const menuKeys = (local?: string): IMenuLink[] => {
-  const pages = Object.keys(contentImport).map((file) => file.slice(9, -10));
-
   const links: IMenuLink[] = [];
 
-  pages
+  Object.keys(contentImport)
+    .filter((key) => !contentImport[key].documentProps?.hidden)
+    .map((file) => file.slice(9, -10))
     .filter((key) => key.search('@') < 0)
     .filter((key) => key.search('_') < 0)
     .filter((key) => key.search('qr-code') < 0)
