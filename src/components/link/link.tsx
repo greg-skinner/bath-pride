@@ -7,14 +7,12 @@ export interface ILinkProps {
   className?: string;
   menuLink?: boolean;
   href: string;
-  aria: string;
 }
 
 export const Link: React.FC<React.PropsWithChildren<ILinkProps>> = ({
   className,
   menuLink,
   href,
-  aria,
   children,
 }) => (
   <a
@@ -24,7 +22,6 @@ export const Link: React.FC<React.PropsWithChildren<ILinkProps>> = ({
         ? `${APP_CONFIG.BASE_URL}${href === '/' ? '' : href}`
         : href
     }
-    aria-label={aria}
   >
     {children}
   </a>
