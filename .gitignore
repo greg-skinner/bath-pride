@@ -4,6 +4,7 @@ node_modules/**
 *.aseprite
 
 www/**
+**/full_size/**
 
 .node-version
 tools/api-key
