@@ -28,8 +28,11 @@ export const Page: React.FC = () => (
         title={'Komedia'}
         link={'https://komediabath.co.uk/'}
       />
+    </div>
+    <div className={styles.title}>Our sponsors</div>
+    <div className={styles.partners}>
       <PartnerBubble
-        accent={4}
+        accent={1}
         img={"@Botanica-Studio.png::Botanica's logo"}
         title={'Botanica Studio'}
         link={'https://www.botanicastudio.co.uk/'}
