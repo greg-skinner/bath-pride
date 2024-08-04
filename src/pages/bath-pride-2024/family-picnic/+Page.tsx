@@ -20,6 +20,7 @@ export const Page: React.FC = () => (
       description={
         'A chance to sit, relax and listen to some live local music.'
       }
+      aria=""
     />
     <StandardPage
       folder={'images'}
@@ -40,6 +41,7 @@ export const Page: React.FC = () => (
               'hearing-loop': 'Hearing loop in museum',
             }}
             link={'https://www.holburne.org/planning-your-visit/accessibility/'}
+            aria="Holburne museum's accessibility information"
           />
         ),
       }}

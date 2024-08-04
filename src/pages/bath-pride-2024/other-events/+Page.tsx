@@ -16,8 +16,15 @@ export const Page: React.FC = () => (
       description={
         "Bath can seem like a quiet city without much going on, but there's a lot of events happening if you know where to look for them. We've partnered with a variety of venues that are putting on events around the Pride weekend to spotlight them here."
       }
+      aria=""
     />
-    <BulletPage folder={'images'} content={content} date={''} title={''} />
+    <BulletPage
+      className={styles.content}
+      folder={'images'}
+      content={content}
+      date={''}
+      title={''}
+    />
   </div>
 );
 

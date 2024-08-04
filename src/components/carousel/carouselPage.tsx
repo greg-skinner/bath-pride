@@ -18,6 +18,7 @@ export const CarouselPage: React.FC<ICarouselPageProps> = ({
   index,
   file,
   title,
+  aria,
 }) => {
   const content = (
     <>
@@ -44,6 +45,7 @@ export const CarouselPage: React.FC<ICarouselPageProps> = ({
         })}
         data-index={index}
         href={action}
+        aria={aria}
       >
         {content}
       </Link>

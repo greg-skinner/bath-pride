@@ -6,20 +6,23 @@ import { AccessibilityIcon } from './accessibilityIcon';
 import styles from './accessibility.module.scss';
 import classNames from 'classnames';
 
-export interface IAccessibilityProps {
+export type IAccessibilityProps = {
   className?: string;
   options: Partial<{ [key in IAccessibilityIcon]: string }>;
-  link: string;
   copy?: string;
-}
+  link: string;
+  aria: string;
+};
 
 export const Accessibility: React.FC<IAccessibilityProps> = ({
   className,
   options,
   link,
   copy,
+  aria,
 }) => (
   <a
+    aria-label={aria}
     className={classNames(className, styles.content)}
     href={link}
     target="_blank"

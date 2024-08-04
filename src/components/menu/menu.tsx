@@ -14,14 +14,14 @@ export interface IMenuProps {
 
 export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
   ({ className, closeFunc, ...rest }, ref) => {
-    const { pageProps, urlPathname } = React.useContext(PageContextState);
+    const { urlPathname } = React.useContext(PageContextState);
 
     const render = (link: IMenuLink) => {
       switch (link.url) {
         case 'news':
           return (
             <div className={styles.container} key={link.url}>
-              <Link menuLink href={`${link.url}`}>
+              <Link aria={link.link} menuLink href={`${link.url}`}>
                 {link.link}
               </Link>
               <div
@@ -33,6 +33,7 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
                   .filter((item) => item.type !== 'press-release')
                   .map((article) => (
                     <Link
+                      aria={article.title}
                       menuLink
                       className={styles.child}
                       key={newsSlug(article)}
@@ -47,7 +48,7 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
         default:
           return (
             <div className={styles.container} key={link.url}>
-              <Link menuLink href={`${link.url}`}>
+              <Link aria={link.link} menuLink href={`${link.url}`}>
                 {link.link}
               </Link>
               {link.sub && (
@@ -58,6 +59,7 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
                 >
                   {link.sub.map((sub) => (
                     <Link
+                      aria={sub.link}
                       menuLink
                       className={styles.child}
                       key={sub.url}

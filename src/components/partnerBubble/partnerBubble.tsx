@@ -11,6 +11,7 @@ export interface IPartnerBubbleProps {
   title: string;
   link: string;
   className?: string;
+  aria: string;
 }
 
 export const PartnerBubble: React.FC<IPartnerBubbleProps> = ({
@@ -19,8 +20,10 @@ export const PartnerBubble: React.FC<IPartnerBubbleProps> = ({
   img,
   title,
   link,
+  aria,
 }) => (
   <a
+    aria-label={aria}
     className={classNames(className, styles.content)}
     data-index={accent}
     href={link}

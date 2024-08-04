@@ -17,6 +17,7 @@ export interface IEventTitleProps {
   location?: string;
   description: string;
   link?: string;
+  aria: string;
 }
 
 export const EventTitle: React.FC<IEventTitleProps> = ({
@@ -29,6 +30,7 @@ export const EventTitle: React.FC<IEventTitleProps> = ({
   location,
   description,
   link,
+  aria,
 }) => (
   <div
     className={classNames(className, styles.content, { [styles.noImg]: !img })}
@@ -42,7 +44,7 @@ export const EventTitle: React.FC<IEventTitleProps> = ({
       />
     )}
     {link ? (
-      <Link className={styles.title} href={link}>
+      <Link aria={aria} className={styles.title} href={link}>
         {title}
       </Link>
     ) : (

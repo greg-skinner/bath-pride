@@ -4,6 +4,7 @@ export interface ICarouselItem {
   file: string;
   title?: string;
   action?: string;
+  aria: string;
 }
 
 export type ICarousel = ICarouselItem[];

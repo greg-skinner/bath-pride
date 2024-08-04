@@ -2,31 +2,37 @@
   {
     "file": "carousel/picnic.jpg",
     "alt": "Bath Pride family picnic",
-    "action": "bath-pride-2024/family-picnic"
+    "action": "bath-pride-2024/family-picnic",
+    "aria": "Bath Pride Family Picnic"
   },
   {
     "file": "carousel/march.jpg",
     "alt": "Bath Pride march",
-    "action": "bath-pride-2024/pride-march"
+    "action": "bath-pride-2024/pride-march",
+    "aria": "Bath Pride March"
   },
   {
     "file": "carousel/wig.jpg",
     "alt": "Bath Pride afterparty - WIG!",
-    "action": "bath-pride-2024/wig"
+    "action": "bath-pride-2024/wig",
+    "aria": "Bath Pride evening event - WIG!"
   },
   {
     "file": "news/read-article.jpg",
     "alt": "Read about the creation of Bath Pride",
-    "action": "news/2024-05-01"
+    "action": "news/2024-05-01",
+    "aria": "The Creation of Bath Pride"
   },
   {
     "file": "carousel/donate.jpg",
     "alt": "Donate to Bath Pride",
-    "action": "https://www.paypal.com/gb/fundraiser/charity/5069290"
+    "action": "https://www.paypal.com/gb/fundraiser/charity/5069290",
+    "aria": "Bath Pride Paypal donation link"
   },
   {
     "file": "carousel/follow-us.jpg",
     "alt": "Follow us on Instagram @Bath.pride",
-    "action": "https://www.instagram.com/bath.pride/"
+    "action": "https://www.instagram.com/bath.pride/",
+    "aria": "Bath Pride Instagram "
   }
 ]
