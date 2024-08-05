@@ -43,16 +43,16 @@ export const parseText = (
       </React.Fragment>
     );
 
-    const link = /= (.*?) = (.*?) =(.*)/.exec(text.slice(mode.index));
+    const link = /= (.*?) = (.*?) = (.*?) =(.*)/.exec(text.slice(mode.index));
 
     if (link) {
       output.push(
-        <Link href={link[1]} key={output.length}>
-          {link[2]}
+        <Link aria={link[2]} href={link[1]} key={output.length}>
+          {link[3]}
         </Link>
       );
 
-      return parseText(link[3], styles, output);
+      return parseText(link[4], styles, output);
     }
   }
 

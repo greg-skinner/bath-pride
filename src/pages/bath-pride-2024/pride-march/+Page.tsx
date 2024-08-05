@@ -24,6 +24,7 @@ export const Page: React.FC = () => (
       time={[new Date('2024-08-18T13:00'), new Date('2024-08-18T14:00')]}
       location={'starting in William Street'}
       description={'Pride March through the city, pride is a protest!'}
+      aria=""
     />
     <StandardPage
       folder={'images'}
@@ -33,8 +34,9 @@ export const Page: React.FC = () => (
       inject={{
         0: (
           <Accessibility
-            options={{}}
             link={''}
+            aria={''}
+            options={{}}
             copy="The march route is step free. There are some slopes that we will be walking up, including William Street, where we start, and Union Street. Please be aware that some of the roads we will be walking may have uneven paving. Please see the carousel below for photographs of the whole route."
           />
         ),

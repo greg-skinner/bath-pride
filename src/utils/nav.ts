@@ -2,7 +2,10 @@ import { IArticle } from '@renderer/news.types';
 import { IMetaData, Page } from '@renderer/types';
 import { addDays, isBefore } from 'date-fns';
 
-import { urlToLink } from './urls';
+const contentImport: Record<string, { Page: Page; documentProps: IMetaData }> =
+  import.meta.glob('../pages/**/+Page.tsx', {
+    eager: true,
+  });
 
 export interface IMenuLink {
   link: string;
@@ -12,11 +15,9 @@ export interface IMenuLink {
 }
 
 const makeMenuLink = (url: string): IMenuLink => ({
-  link: contentImport[`../pages/${url}/+Page.tsx`].documentProps.title,
+  link: contentImport[`../pages/${url}/+Page.tsx`].documentProps.title!,
   url: url === 'index' ? '/' : url,
 });
-
-// DYNAMIC
 
 const newsImport: Record<string, { default: IArticle }> = import.meta.glob(
   '../content/news/*',
@@ -32,13 +33,6 @@ export const news = Object.values(newsImport)
 
 export const newsSlug = (article: IArticle) => article.date;
 
-// STATIC
-
-const contentImport: Record<string, { Page: Page; documentProps: IMetaData }> =
-  import.meta.glob('../pages/**/+Page.tsx', {
-    eager: true,
-  });
-
 const sortOrder = [
   'bath-pride-2024',
   'news',
@@ -47,6 +41,7 @@ const sortOrder = [
   'Family Picnic',
   'Pride March',
   'WIG!',
+  'Other Events',
   'Support Us',
   'Our Team',
   'Our Values',

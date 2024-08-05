@@ -10,7 +10,7 @@ export const Page: React.FC = () => (
       Bath Pride is a registered charity. Everything we do is aimed towards
       bringing the local LGBT+ community through events and campaigns.
     </div>
-    <Link className={styles.link} href="about-us/support-us">
+    <Link aria="Support us" className={styles.link} href="about-us/support-us">
       Support us
     </Link>
     <div>
@@ -18,7 +18,11 @@ export const Page: React.FC = () => (
       donate to enable us to function. Find out how you can support us to
       continue our work and make Bath a more inclusive and accepting city.
     </div>
-    <Link className={styles.link} href="about-us/governance">
+    <Link
+      aria="Our governance details"
+      className={styles.link}
+      href="about-us/governance"
+    >
       Governance
     </Link>
     <div>
@@ -26,14 +30,14 @@ export const Page: React.FC = () => (
       Find out about our constitution, policies, and frameworks that exist to
       enable us to undertake our work.
     </div>
-    <Link className={styles.link} href="about-us/our-team">
+    <Link aria="Our team" className={styles.link} href="about-us/our-team">
       Our Team
     </Link>
     <div>
       Bath Pride is run by local LGBT+ people who volunteer their time to bring
       you Bath Pride. Find out about our Trustee Board and Organising Committee.
     </div>
-    <Link className={styles.link} href="about-us/our-values">
+    <Link aria="Our values" className={styles.link} href="about-us/our-values">
       Our Values
     </Link>
     <div>
@@ -44,7 +48,11 @@ export const Page: React.FC = () => (
     <br />
     <div className={styles.leading}>
       If you have any questions or queries, please email{' '}
-      <a className={styles.inlineLink} href="mailto:hello@bathpride.org">
+      <a
+        aria-label="Email hello@bathpride.org"
+        className={styles.inlineLink}
+        href="mailto:hello@bathpride.org"
+      >
         hello@bathpride.org
       </a>
       . Remember that we are all volunteers so it may take some time to get back
@@ -52,7 +60,7 @@ export const Page: React.FC = () => (
     </div>
     <div>
       If you are looking for{' '}
-      <Link className={''} href="about-us/media">
+      <Link aria="Press and media pack" className={''} href="about-us/media">
         press or media assets
       </Link>
       , we have a selection of marketing assets, images for colour and logos
@@ -62,6 +70,7 @@ export const Page: React.FC = () => (
     <div>
       Some icons on this website are by{' '}
       <a
+        aria-label="Smashicons icon attribution"
         target="_blank"
         rel="noreferrer"
         href="https://www.freepik.com/icon/guide-dog_1512681"
@@ -70,6 +79,7 @@ export const Page: React.FC = () => (
       </a>
       ,{' '}
       <a
+        aria-label="Hadi Davodpour icon attribution"
         target="_blank"
         rel="noreferrer"
         href="https://thenounproject.com/icon/hearing-loop-28162/"
@@ -77,7 +87,12 @@ export const Page: React.FC = () => (
         Hadi Davodpour from Noun Project
       </a>{' '}
       and{' '}
-      <a target="_blank" rel="noreferrer" href="https://uxwing.com/">
+      <a
+        aria-label="uxwing icon attribution"
+        target="_blank"
+        rel="noreferrer"
+        href="https://uxwing.com/"
+      >
         uxwing
       </a>
       , and are used under Creative Commons licenses.

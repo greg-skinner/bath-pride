@@ -26,6 +26,7 @@ export const Page: React.FC = () => (
           'A chance to sit, relax and listen to some live local music.'
         }
         link="bath-pride-2024/family-picnic"
+        aria="Bath Pride family picnic"
       />
       <EventTitle
         img={
@@ -38,6 +39,7 @@ export const Page: React.FC = () => (
         location={'location to be confirmed'}
         description={'Pride March through the city, pride is a protest!'}
         link="bath-pride-2024/pride-march"
+        aria="Bath Pride march"
       />
       <EventTitle
         img={"@WIG.jpg::WIG!'s logo"}
@@ -50,6 +52,18 @@ export const Page: React.FC = () => (
           'The Official Bath Pride 2024 after party - WIG! Midsummer Night’s Dream'
         }
         link="bath-pride-2024/wig"
+        aria="Bath Pride evening event - WIG"
+      />
+      <EventTitle
+        img={"@logo_stone.png::Bath Pride's logo"}
+        className={styles.event}
+        title={'Other Pride events'}
+        label={'Various dates'}
+        description={
+          "There's lots of other events across the city affiliate with Bath Pride - here's a selection"
+        }
+        link="bath-pride-2024/other-events"
+        aria="Other Bath Pride events"
       />
     </div>
   </div>

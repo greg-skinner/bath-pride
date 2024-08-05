@@ -19,6 +19,7 @@ export const Page: React.FC = () => (
       time={[new Date('2024-08-18T18:00'), 'Late']}
       location={'Komedia'}
       description={'The Official Bath Pride 2024 after party'}
+      aria=""
     />
     <StandardPage
       folder={'images'}
@@ -38,6 +39,7 @@ export const Page: React.FC = () => (
               parking: 'Provision for blue badge holder parking',
             }}
             link={'https://komediabath.co.uk/plan-your-visit/accessibility/'}
+            aria="Komedia's accessibility information"
           />
         ),
       }}

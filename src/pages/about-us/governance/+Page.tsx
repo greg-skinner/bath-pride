@@ -16,7 +16,10 @@ export const Page: React.FC = () => (
     <NewsTitle title="Our Objects" />
     <div>
       As a charity, we exist to further our objects contained in{' '}
-      <Link href="https://drive.google.com/file/d/1t19f6EMt3ZNfVcb1muu4epq2L8rkFGDK/view?usp=sharing">
+      <Link
+        aria="Our constitution"
+        href="https://drive.google.com/file/d/1t19f6EMt3ZNfVcb1muu4epq2L8rkFGDK/view?usp=sharing"
+      >
         our constitution
       </Link>
       . These are:
@@ -56,8 +59,10 @@ export const Page: React.FC = () => (
     <NewsTitle title="Decision Making" />
     <div>
       Bath Pride is run by the{' '}
-      <Link href={'about-us/our-team/'}>Board of Trustees</Link> who have a
-      variety of duties, including:
+      <Link aria="Board of Trustees" href={'about-us/our-team/'}>
+        Board of Trustees
+      </Link>{' '}
+      who have a variety of duties, including:
     </div>
     <ul>
       <li>creating and approving all our policies and governing documents,</li>
@@ -70,10 +75,12 @@ export const Page: React.FC = () => (
     </ul>
     <div>
       There is a subcommittee of the board, called the{' '}
-      <Link href={'about-us/our-team/'}>Organising Committee</Link>. They are
-      tasked with the more day-to-day running of Bath Pride, delivering the
-      events and activities under the direction of the board. They are tasked
-      with:
+      <Link aria="Our organising committee" href={'about-us/our-team/'}>
+        Organising Committee
+      </Link>
+      . They are tasked with the more day-to-day running of Bath Pride,
+      delivering the events and activities under the direction of the board.
+      They are tasked with:
     </div>
     <ul>
       <li>
@@ -98,12 +105,18 @@ export const Page: React.FC = () => (
     </div>
     <div>
       We have created a{' '}
-      <Link href="https://drive.google.com/file/d/1ABortbFfkxAk9gyMei8mswGxNH15QiRF/view?usp=sharing">
+      <Link
+        aria="Our decision making framework"
+        href="https://drive.google.com/file/d/1ABortbFfkxAk9gyMei8mswGxNH15QiRF/view?usp=sharing"
+      >
         Decision Making Framework
       </Link>{' '}
       that explains the ethos and principles to how we approach decisions within
       Bath Pride. There is also an{' '}
-      <Link href="https://drive.google.com/file/d/1rRcGi-p9-ToMI1_kyGht6QZnPNtlOfMA/view?usp=sharing">
+      <Link
+        aria="Our organising committee terms of reference"
+        href="https://drive.google.com/file/d/1rRcGi-p9-ToMI1_kyGht6QZnPNtlOfMA/view?usp=sharing"
+      >
         Organising Committee Terms of Reference
       </Link>{' '}
       that outlines its powers and membership.
@@ -115,7 +128,10 @@ export const Page: React.FC = () => (
     </div>
     <div>
       Our{' '}
-      <Link href="https://drive.google.com/file/d/1HYhpG--phvY7OZeyHzj6IMLcDyCeW8js/view?usp=sharing">
+      <Link
+        aria="Our finance policy"
+        href="https://drive.google.com/file/d/1HYhpG--phvY7OZeyHzj6IMLcDyCeW8js/view?usp=sharing"
+      >
         Finance Policy
       </Link>{' '}
       outlines our process for approving income and expenditure, and our other
@@ -127,22 +143,34 @@ export const Page: React.FC = () => (
     <NewsTitle title="Documents" />
     <ul className={styles.links}>
       <li>
-        <Link href="https://drive.google.com/file/d/1t19f6EMt3ZNfVcb1muu4epq2L8rkFGDK/view?usp=sharing">
+        <Link
+          aria="Our constitution"
+          href="https://drive.google.com/file/d/1t19f6EMt3ZNfVcb1muu4epq2L8rkFGDK/view?usp=sharing"
+        >
           Constitution
         </Link>
       </li>
       <li>
-        <Link href="https://drive.google.com/file/d/1ABortbFfkxAk9gyMei8mswGxNH15QiRF/view?usp=sharing">
+        <Link
+          aria="Our decision making framework"
+          href="https://drive.google.com/file/d/1ABortbFfkxAk9gyMei8mswGxNH15QiRF/view?usp=sharing"
+        >
           Decision Making Framework
         </Link>
       </li>
       <li>
-        <Link href="https://drive.google.com/file/d/1rRcGi-p9-ToMI1_kyGht6QZnPNtlOfMA/view?usp=sharing">
+        <Link
+          aria="Our organising committee terms of reference"
+          href="https://drive.google.com/file/d/1rRcGi-p9-ToMI1_kyGht6QZnPNtlOfMA/view?usp=sharing"
+        >
           Organising Committee Terms of Reference
         </Link>
       </li>
       <li>
-        <Link href="https://drive.google.com/file/d/1HYhpG--phvY7OZeyHzj6IMLcDyCeW8js/view?usp=sharing">
+        <Link
+          aria="Our finance policy"
+          href="https://drive.google.com/file/d/1HYhpG--phvY7OZeyHzj6IMLcDyCeW8js/view?usp=sharing"
+        >
           Finance Policy
         </Link>
       </li>

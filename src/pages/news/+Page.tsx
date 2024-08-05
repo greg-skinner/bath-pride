@@ -14,7 +14,7 @@ export const Page: React.FC = () => (
         (article) =>
           isBefore(article.date, addDays(new Date(), 1)) && (
             <li key={newsSlug(article)}>
-              <Link href={`news/${newsSlug(article)}`}>
+              <Link aria={article.title} href={`news/${newsSlug(article)}`}>
                 {format(article.date, 'do MMMM y')} - {article.title}
               </Link>
             </li>
