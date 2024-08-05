@@ -47,7 +47,7 @@ export const parseText = (
 
     if (link) {
       output.push(
-        <Link aria={link[2]} href={link[1]} key={output.length}>
+        <Link aria={link[2]} href={link[1]} key={output.length} tab>
           {link[3]}
         </Link>
       );
