@@ -12,6 +12,7 @@ export type IAccessibilityProps = {
   copy?: string;
   link: string;
   aria: string;
+  smaller?: boolean;
 };
 
 export const Accessibility: React.FC<IAccessibilityProps> = ({
@@ -20,10 +21,13 @@ export const Accessibility: React.FC<IAccessibilityProps> = ({
   link,
   copy,
   aria,
+  smaller,
 }) => (
   <a
     aria-label={aria}
-    className={classNames(className, styles.content)}
+    className={classNames(className, styles.content, {
+      [styles.smaller]: smaller,
+    })}
     href={link}
     target="_blank"
     rel="noreferrer"

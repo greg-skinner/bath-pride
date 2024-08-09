@@ -13,6 +13,7 @@ export interface IBulletPageProps {
   date: string;
   folder?: string;
   title: string;
+  inject?: { [key: number]: React.ReactNode };
 }
 
 export const BulletPage: React.FC<IBulletPageProps> = ({
@@ -21,6 +22,7 @@ export const BulletPage: React.FC<IBulletPageProps> = ({
   date,
   folder,
   title,
+  inject,
 }) => {
   const text: string[] = [];
   const images: { [index: number]: string } = {};
@@ -55,6 +57,19 @@ export const BulletPage: React.FC<IBulletPageProps> = ({
             }}
             text={item}
           />
+          {inject && inject[index] && (
+            <div
+              className={styles.text}
+              style={
+                {
+                  '--grid-column': String(3),
+                  '--grid-row': String(index + 2),
+                } as React.CSSProperties
+              }
+            >
+              {inject[index]}
+            </div>
+          )}
         </React.Fragment>
       ))}
     </div>

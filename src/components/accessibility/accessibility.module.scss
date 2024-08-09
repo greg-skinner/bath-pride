@@ -19,6 +19,14 @@
   box-sizing: border-box;
   background: theme.$stone;
 
+  &.smaller {
+    font-size: theme.$font-smaller;
+
+    .title {
+      font-size: theme.$font-normal;
+    }
+  }
+
   .header {
     display: grid;
     grid-template-columns: '.' '.';

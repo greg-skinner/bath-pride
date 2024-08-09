@@ -1,0 +1,10 @@
+@use '@theme/mixins.scss';
+@use '@theme/theme.scss';
+
+.page {
+  padding: theme.$spacing-small;
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
