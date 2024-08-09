@@ -60,20 +60,6 @@ export const Page: React.FC = () => (
             options={{
               'level-access': 'Level access to the event',
               toilets: 'Accessible toilet',
-              seating: 'Inside seating for the event',
-              'assistance-dogs': 'Assistance dogs welcome',
-            }}
-            link=""
-            aria=""
-          />
-        ),
-        3: (
-          <Accessibility
-            smaller
-            className={styles.accessibility}
-            options={{
-              'level-access': 'Level access to the event',
-              toilets: 'Accessible toilet',
               seating: 'Inside seating',
               'assistance-dogs': 'Assistance dogs welcome',
             }}
@@ -81,7 +67,7 @@ export const Page: React.FC = () => (
             aria="Accessibility details for Boom Battle Bar"
           />
         ),
-        4: (
+        3: (
           <Accessibility
             options={{
               'level-access': 'Level access to the event',
