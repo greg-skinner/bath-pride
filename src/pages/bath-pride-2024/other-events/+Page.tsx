@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { Accessibility } from '@components/accessibility';
 import { BulletPage } from '@components/bulletPage/bulletPage';
 import { EventTitle } from '@components/eventTitle';
 
@@ -24,6 +25,79 @@ export const Page: React.FC = () => (
       content={content}
       date={''}
       title={''}
+      inject={{
+        0: (
+          <Accessibility
+            smaller
+            className={styles.accessibility}
+            options={{
+              'level-access': 'Level access to the event',
+              toilets: 'Accessible toilet',
+              seating: 'Inside seating for the event',
+              'assistance-dogs': 'Assistance dogs welcome',
+            }}
+            link=""
+            aria=""
+          />
+        ),
+        1: (
+          <Accessibility
+            smaller
+            className={styles.accessibility}
+            options={{
+              'level-access': '7 steps to the event',
+              seating: 'Inside seating for the event',
+              'assistance-dogs': 'Dogs welcome',
+            }}
+            link="/our-partners/accessibility/daisy-and-bean"
+            aria="Accessibility details for Daisy and Bean"
+          />
+        ),
+        2: (
+          <Accessibility
+            smaller
+            className={styles.accessibility}
+            options={{
+              'level-access': 'Level access to the event',
+              toilets: 'Accessible toilet',
+              seating: 'Inside seating for the event',
+              'assistance-dogs': 'Assistance dogs welcome',
+            }}
+            link=""
+            aria=""
+          />
+        ),
+        3: (
+          <Accessibility
+            smaller
+            className={styles.accessibility}
+            options={{
+              'level-access': 'Level access to the event',
+              toilets: 'Accessible toilet',
+              seating: 'Inside seating',
+              'assistance-dogs': 'Assistance dogs welcome',
+            }}
+            link="/our-partners/accessibility/boom-battle-bar"
+            aria="Accessibility details for Boom Battle Bar"
+          />
+        ),
+        4: (
+          <Accessibility
+            options={{
+              'level-access': 'Level access to the event',
+              toilets: 'Accessible and gender-neutral toilets',
+              'assistance-dogs': 'Assistance dogs welcome',
+              'assistant-ticket':
+                'Complimentary ticket for a personal assistant',
+              parking: 'Provision for blue badge holder parking',
+            }}
+            link={'https://komediabath.co.uk/plan-your-visit/accessibility/'}
+            aria="Komedia's accessibility information"
+            smaller
+            className={styles.accessibility}
+          />
+        ),
+      }}
     />
   </div>
 );

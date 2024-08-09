@@ -55,7 +55,7 @@ export const Page: React.FC = () => (
         aria="Bath Pride evening event - WIG"
       />
       <EventTitle
-        img={"@logo_stone.png::Bath Pride's logo"}
+        img={"@bath-pride-logo_stone.png::Bath Pride's logo"}
         className={styles.event}
         title={'Other Pride events'}
         label={'Various dates'}

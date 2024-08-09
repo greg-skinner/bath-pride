@@ -17,4 +17,8 @@
       font-size: theme.$font-header;
     }
   }
+
+  .accessibility {
+    margin-top: calc(-1 * theme.$spacing-neutral);
+  }
 }
