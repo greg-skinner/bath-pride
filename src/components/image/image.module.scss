@@ -6,6 +6,7 @@
   grid-template-areas: 'img' 'label';
   height: fit-content;
   justify-items: center;
+  align-self: start;
 
   img {
     grid-area: img;

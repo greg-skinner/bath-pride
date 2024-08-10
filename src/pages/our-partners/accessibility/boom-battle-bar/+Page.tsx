@@ -9,15 +9,13 @@ import styles from './index.module.scss';
 const content: string[] = _content;
 
 export const Page: React.FC = () => (
-  <div className={styles.page}>
-    <StandardPage
-      className={styles.content}
-      content={content}
-      date={''}
-      title={'Boom Battle Bar Accessibility Statement'}
-      folder="images"
-    />
-  </div>
+  <StandardPage
+    className={styles.content}
+    content={content}
+    date={''}
+    title={'Boom Battle Bar Accessibility Statement'}
+    folder="images"
+  />
 );
 
 export const documentProps = {

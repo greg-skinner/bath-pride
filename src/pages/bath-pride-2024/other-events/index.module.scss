@@ -9,6 +9,7 @@
 
     @include mixins.desktop {
       grid-template-columns: 3fr 5fr 4fr;
+      align-items: baseline;
     }
   }
 
