@@ -1,11 +1,12 @@
 import * as React from 'react';
 
+import { RenderText } from '@components/renderText';
+
 import { IAccessibilityIcon } from './accessibility.types';
 import { AccessibilityIcon } from './accessibilityIcon';
 
 import styles from './accessibility.module.scss';
 import classNames from 'classnames';
-import { RenderText } from '@components/renderText';
 
 export type IAccessibilityProps = {
   className?: string;
