@@ -53,7 +53,7 @@ export const StandardPage: React.FC<IStandardPageProps> = ({
     <div className={classNames(className, styles.content)}>
       {text.map((item, index) => (
         <React.Fragment key={index}>
-          {index === 0 && (
+          {index === 0 && title && (
             <NewsTitle className={styles.header} date={date} title={title} />
           )}
           <RenderText
