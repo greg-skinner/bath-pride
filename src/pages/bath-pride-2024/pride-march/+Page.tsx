@@ -37,7 +37,7 @@ export const Page: React.FC = () => (
             link={''}
             aria={''}
             options={{}}
-            copy="The march route is step free. There are some slopes that we will be walking up, including William Street, where we start, and Union Street. Please be aware that some of the roads we will be walking may have uneven paving. Please see the carousel below for photographs of the whole route."
+            copy="Please see the carousel below for photographs of the whole route. Key information: * Step free * Some slopes and uneven paving * Toilets on the route can be found via the = http://toiletfinder.net/ = Toilet Finder app = Toilet Finder app = and = http://www.toiletmap.org.uk = Great British Public Toilet Map = Great British Public Toilet Map = * "
           />
         ),
       }}
