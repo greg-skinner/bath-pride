@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Image } from '@components/image';
+import { NewsImage } from '@components/image';
 
 import styles from './partnerBubble.module.scss';
 import classNames from 'classnames';
@@ -28,7 +28,7 @@ export const PartnerBubble: React.FC<IPartnerBubbleProps> = ({
     data-index={accent}
     href={link}
   >
-    <Image
+    <NewsImage
       className={styles.image}
       cssVar={{}}
       dataLine={img}

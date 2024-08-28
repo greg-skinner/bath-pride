@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { Link } from '@components/link/link';
 import { Menu } from '@components/menu';
 import { Socials } from '@components/socials';
 
@@ -9,9 +10,16 @@ import classNames from 'classnames';
 export interface IHeaderProps {
   className?: string;
   icon?: string;
+  href?: string;
+  aria: string;
 }
 
-export const Header: React.FC<IHeaderProps> = ({ className, icon }) => {
+export const Header: React.FC<IHeaderProps> = ({
+  className,
+  icon,
+  href,
+  aria,
+}) => {
   const [showMenu, setShowMenu] = React.useState(false);
   const [slideMenu, setSlideMenu] = React.useState(false);
   const menuRef = React.useRef<HTMLDivElement>(null);
@@ -32,7 +40,11 @@ export const Header: React.FC<IHeaderProps> = ({ className, icon }) => {
 
   return (
     <div className={classNames(className, styles.header)}>
-      {icon && (
+      {icon && href ? (
+        <Link href={href} aria={aria}>
+          <img className={styles.icon} src={`${APP_CONFIG.BASE_URL}${icon}`} />
+        </Link>
+      ) : (
         <img className={styles.icon} src={`${APP_CONFIG.BASE_URL}${icon}`} />
       )}
       <Menu className={styles.options} />

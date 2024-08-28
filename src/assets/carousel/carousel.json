@@ -1,21 +1,9 @@
 [
   {
-    "file": "carousel/picnic.jpg",
-    "alt": "Bath Pride family picnic",
-    "action": "bath-pride-2024/family-picnic",
-    "aria": "Bath Pride Family Picnic"
-  },
-  {
-    "file": "carousel/march.jpg",
-    "alt": "Bath Pride march",
-    "action": "bath-pride-2024/pride-march",
-    "aria": "Bath Pride March"
-  },
-  {
-    "file": "carousel/wig.jpg",
-    "alt": "Bath Pride afterparty - WIG!",
-    "action": "bath-pride-2024/wig",
-    "aria": "Bath Pride evening event - WIG!"
+    "file": "carousel/pride-2024.png",
+    "alt": "Bath Pride 2024!",
+    "action": "bath-pride-2024",
+    "aria": "Bath Pride 2024 page"
   },
   {
     "file": "news/read-article.jpg",

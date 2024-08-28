@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { EventTitle } from '@components/eventTitle';
+import { Image } from '@components/image';
 
 import styles from './index.module.scss';
 
@@ -8,64 +8,50 @@ export const Page: React.FC = () => (
   <div className={styles.page}>
     <div className={styles.title}>Bath Pride 2024</div>
     <div className={styles.copy}>
-      We are excited to bring you Bath’s first ever pride event! Join us for a
-      family picnic, a protest march, and the official after party at WIG! Make
-      sure you have the date in your calendar!
+      What a day! Three times as many people as we expected arrived on the day
+      to the picnic and the march, and we were blown away by the support
+      everyone showed to this first event.
     </div>
-    <div className={styles.events}>
-      <EventTitle
-        img={
-          '@The_Holburne_Museum.jpg::The front facade of the Holburne Museum'
-        }
-        className={styles.event}
-        title={'Family Picnic'}
-        date={new Date('2024-08-18')}
-        time={[new Date('2024-08-18T12:00'), new Date('2024-08-18T17:00')]}
-        location={'Holburne Museum'}
-        description={
-          'A chance to sit, relax and listen to some live local music.'
-        }
-        link="bath-pride-2024/family-picnic"
-        aria="Bath Pride family picnic"
-      />
-      <EventTitle
-        img={
-          '@Pride-March.jpg::A group of protesters holding LGBT+ related signs in Bath'
-        }
-        className={styles.event}
-        title={'Pride March'}
-        date={new Date('2024-08-18')}
-        time={[new Date('2024-08-18T13:00'), new Date('2024-08-18T14:00')]}
-        location={'location to be confirmed'}
-        description={'Pride March through the city, pride is a protest!'}
-        link="bath-pride-2024/pride-march"
-        aria="Bath Pride march"
-      />
-      <EventTitle
-        img={"@WIG.jpg::WIG!'s logo"}
-        className={styles.event}
-        title={'WIG!'}
-        date={new Date('2024-08-18')}
-        time={[new Date('2024-08-18T18:00'), 'Late']}
-        location={'Komedia'}
-        description={
-          'The Official Bath Pride 2024 after party - WIG! Midsummer Night’s Dream'
-        }
-        link="bath-pride-2024/wig"
-        aria="Bath Pride evening event - WIG"
-      />
-      <EventTitle
-        img={"@bath-pride-logo_stone.png::Bath Pride's logo"}
-        className={styles.event}
-        title={'Other Pride events'}
-        label={'Various dates'}
-        description={
-          "There's lots of other events across the city affiliate with Bath Pride - here's a selection"
-        }
-        link="bath-pride-2024/other-events"
-        aria="Other Bath Pride events"
-      />
+    <Image
+      className={styles.image}
+      folder={'images/2024'}
+      file={'holburne.jpg'}
+      caption={''}
+      alt={'The crowd outside the Holburne museum with various pride flags'}
+    />
+    <div className={styles.copy}>
+      We were so pleased to see so many people join us to march through the city
+      - far beyond our expectations, and just barely within our capacity! A
+      massive thank you to all of the volunteer marshals who helped keep
+      everyone safe, and thank yous to all the groups who came together to
+      represent their communities, as well as everyone who joined as
+      individuals. Particular thanks to the Ambulance service, who's ambulance
+      brought up the rear of the march in style.
     </div>
+    <Image
+      className={styles.image}
+      folder={'images/2024'}
+      file={'march.png'}
+      caption={''}
+      alt={'A view of the march as it headed back up Great Pultney Street'}
+    />
+    <div className={styles.copy}>
+      Thank you so much to everyone who attended the picnic - stallholders and
+      musicians, families, individuals, groups of friends and colleagues, we
+      were so pleased to see all of you out to celebrate with us. Special thanks
+      also to the Holburne Museum, who gave us so much support and let us use
+      their space, and Bath Business Improvement District who lent us equipment
+      that let us run the event smoothly.
+    </div>
+    <Image
+      className={styles.image}
+      folder={'images/2024'}
+      file={'picnic.jpg'}
+      caption={''}
+      alt={
+        'A view of the back of the Holburne Museum showing some of the picnic attendees and stalls'
+      }
+    />
   </div>
 );
 
