@@ -23,5 +23,5 @@ export const Page: React.FC = () => (
 export const documentProps = {
   title: 'Our Team',
   description: 'Our team of volunteers, working hard to deliver Bath Pride.',
-  img: 'carousel/stay-tuned.jpg',
+  img: 'images/2024/holburne.jpg',
 };
