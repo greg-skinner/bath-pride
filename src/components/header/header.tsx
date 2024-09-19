@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import { Link } from '@components/link/link';
 import { Menu } from '@components/menu';
-import { Socials } from '@components/socials';
 
 import styles from './header.module.scss';
 import classNames from 'classnames';
@@ -51,7 +50,6 @@ export const Header: React.FC<IHeaderProps> = ({
       <button onClick={hamburger} className={styles.hamburger}>
         ︙
       </button>
-      <Socials className={styles.socials} />
       <div data-show={showMenu ? 'true' : 'false'} className={styles.container}>
         <div className={styles.dismiss} onClick={hamburger} />
         <Menu

@@ -5,6 +5,7 @@
   display: flex;
   background: theme.$stone;
   gap: theme.$spacing-small;
+  box-sizing: border-box;
 
   @include mixins.title;
 
@@ -61,6 +62,24 @@
   @include mixins.desktop {
     .container:hover .sub-link {
       max-height: 120rem;
+    }
+  }
+
+  .spacer {
+    flex-grow: 1;
+  }
+
+  .outbound {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .donate {
+    text-align: right;
+    .link {
+      display: block;
     }
   }
 }
