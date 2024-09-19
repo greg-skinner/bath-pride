@@ -2,6 +2,9 @@
 @use '@theme/mixins';
 
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
   background: theme.$stone;
   display: grid;
   grid-template: 'icon options hamburger';

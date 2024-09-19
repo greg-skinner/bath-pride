@@ -182,5 +182,5 @@ export const documentProps = {
   title: 'Governance',
   description:
     'Bath Pride is a registered charity and we exist to undertake our charitable objects. This page contains what our purpose is, ourconstitution, and our policies.',
-  img: 'carousel/stay-tuned.jpg',
+  img: 'images/2024/holburne.jpg',
 };
