@@ -174,6 +174,14 @@ export const Page: React.FC = () => (
           Finance Policy
         </Link>
       </li>
+      <li>
+        <Link
+          aria="Our complaints policy"
+          href="https://drive.google.com/file/d/1Tz6JFMaUkhu98wR3kzeH-8GwYrxW4UhA/view?usp=sharing"
+        >
+          Complaints Policy
+        </Link>
+      </li>
     </ul>
   </div>
 );
