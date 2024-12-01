@@ -16,17 +16,23 @@ export const Image: React.FC<IImageProps> = ({
   dataLine,
   folder,
 }) => {
-  const regex = dataLine.match(/@(.*?):(.*?):(.*)/);
-  if (regex !== null) {
-    const [, file, caption, alt] = regex;
-
-    return (
-      <div className={classNames(className, styles.content)} style={cssVar}>
-        <img src={`${APP_CONFIG.BASE_URL}${folder}/${file}`} alt={alt} />
-        <label>{caption}</label>
-      </div>
-    );
+  let file, caption, alt;
+  try {
+    const regex = dataLine.match(/@(.*?):(.*?):(.*)/);
+    if (regex !== null) {
+      [, file, caption, alt] = regex;
+    }  
+  } catch (e) {
+    file = 'bath-pride-logo_stone.png';
+    alt = 'The Bath Pride Logo';
+    caption = '';
+    folder = 'images';
   }
 
-  return null;
+  return (
+    <div className={classNames(className, styles.content)} style={cssVar}>
+      <img src={`${APP_CONFIG.BASE_URL}${folder}/${file}`} alt={alt} />
+      <label>{caption}</label>
+    </div>
+  );
 };
