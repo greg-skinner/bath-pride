@@ -24,7 +24,8 @@
   .title {
     grid-area: title;
 
-    @include mixins.title();
+    @include mixins.title;
+
     font-size: theme.$font-extra-large;
   }
 

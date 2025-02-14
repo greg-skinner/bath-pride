@@ -3,7 +3,8 @@
 @use 'sass:map';
 
 .carousel {
-  @include mixins.banner();
+  @include mixins.banner;
+
   --swiper-navigation-top-offset: 45%;
   --swiper-theme-color: #fff;
   --swiper-pagination-bottom: 0px;
@@ -36,7 +37,8 @@
     }
 
     img {
-      @include mixins.banner();
+      @include mixins.banner;
+
       object-fit: cover;
       margin-bottom: 0.75rem;
 
