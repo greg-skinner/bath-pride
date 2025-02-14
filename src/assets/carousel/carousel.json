@@ -6,19 +6,13 @@
     "aria": "Bath Pride 2024 page"
   },
   {
-    "file": "news/read-article.jpg",
-    "alt": "Read about the creation of Bath Pride",
-    "action": "news/2024-05-01",
-    "aria": "The Creation of Bath Pride"
-  },
-  {
     "file": "carousel/donate.jpg",
     "alt": "Donate to Bath Pride",
     "action": "https://www.paypal.com/gb/fundraiser/charity/5069290",
     "aria": "Bath Pride Paypal donation link"
   },
   {
-    "file": "carousel/follow-us.jpg",
+    "file": "carousel/socials.jpg",
     "alt": "Follow us on Instagram @Bath.pride",
     "action": "https://www.instagram.com/bath.pride/",
     "aria": "Bath Pride Instagram "
