@@ -2,7 +2,7 @@
 @use '@theme/mixins';
 
 .banner {
-  @include mixins.banner();
+  @include mixins.banner;
 
   height: mixins.$banner-height;
   overflow: hidden;

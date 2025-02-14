@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Image } from '@components/image';
+import { NewsImage } from '@components/image';
 import { NewsTitle } from '@components/newsTitle';
 import { RenderText } from '@components/renderText';
 
@@ -47,7 +47,7 @@ export const PressRelease: React.FC<IPressReleaseProps> = ({
         </React.Fragment>
       ))}
       {images.map((item) => (
-        <Image
+        <NewsImage
           key={item}
           className={classNames(styles.image)}
           dataLine={item}

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Image } from '@components/image';
+import { NewsImage } from '@components/image';
 import { NewsTitle } from '@components/newsTitle';
 import { RenderText } from '@components/renderText';
 
@@ -66,7 +66,7 @@ export const StandardPage: React.FC<IStandardPageProps> = ({
               className={styles.image}
               style={createCssVars(index) as React.CSSProperties}
             >
-              <Image
+              <NewsImage
                 dataLine={images[index]}
                 cssVar={createCssVars(index)}
                 folder={folder || 'news'}

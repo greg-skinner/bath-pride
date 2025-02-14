@@ -3,7 +3,8 @@
 @use 'sass:map';
 
 .carousel {
-  @include mixins.banner();
+  @include mixins.banner;
+
   --swiper-navigation-top-offset: 45%;
   --swiper-theme-color: #fff;
 
@@ -11,6 +12,7 @@
     --swiper-navigation-top-offset: 50%;
     --swiper-pagination-bottom: 0px;
   }
+
   height: 100%;
   overflow: hidden;
 
@@ -19,7 +21,6 @@
     color: theme.$white;
     display: flex;
     flex-direction: column;
-
     max-height: 401px;
 
     @include mixins.mobile {
@@ -45,7 +46,8 @@
     }
 
     img {
-      @include mixins.banner();
+      @include mixins.banner;
+
       object-fit: cover;
       height: 48dvh;
       min-height: 350px;

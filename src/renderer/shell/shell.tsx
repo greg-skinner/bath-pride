@@ -12,6 +12,8 @@ export const Shell: React.FC<React.PropsWithChildren> = ({ children }) => (
     <Header
       className={styles.header}
       icon={'images/bath-pride-logo_transparent.png'}
+      href="/"
+      aria="Bath Pride homepage"
     />
     <div className={styles.page}>{children}</div>
     <Footer className={styles.footer} msg={'footer'} />

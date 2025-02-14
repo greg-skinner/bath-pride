@@ -5,7 +5,7 @@
 .content {
   width: 14rem;
   height: 14rem;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem;
   border: solid 1rem;
   border-bottom-width: 2.75rem;
   border-radius: 1rem;
@@ -37,6 +37,6 @@
   .title {
     font-size: theme.$font-header;
     color: theme.$white;
-    margin-top: 1rem;
+    margin: 1rem -1rem;
   }
 }

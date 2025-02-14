@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Image } from '@components/image';
+import { NewsImage } from '@components/image';
 
 import styles from './partnerBubble.module.scss';
 import classNames from 'classnames';
@@ -12,6 +12,7 @@ export interface IPartnerBubbleProps {
   link: string;
   className?: string;
   aria: string;
+  folder?: string;
 }
 
 export const PartnerBubble: React.FC<IPartnerBubbleProps> = ({
@@ -21,6 +22,7 @@ export const PartnerBubble: React.FC<IPartnerBubbleProps> = ({
   title,
   link,
   aria,
+  folder = 'images',
 }) => (
   <a
     aria-label={aria}
@@ -28,11 +30,11 @@ export const PartnerBubble: React.FC<IPartnerBubbleProps> = ({
     data-index={accent}
     href={link}
   >
-    <Image
+    <NewsImage
       className={styles.image}
       cssVar={{}}
       dataLine={img}
-      folder={'images'}
+      folder={folder}
     />
     <div className={styles.title}>{title}</div>
   </a>

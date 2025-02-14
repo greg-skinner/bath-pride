@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Image } from '@components/image';
+import { NewsImage } from '@components/image';
 import { Link } from '@components/link/link';
 import { format } from 'date-fns';
 
@@ -36,7 +36,7 @@ export const EventTitle: React.FC<IEventTitleProps> = ({
     className={classNames(className, styles.content, { [styles.noImg]: !img })}
   >
     {img && (
-      <Image
+      <NewsImage
         className={styles.image}
         cssVar={{}}
         dataLine={img}

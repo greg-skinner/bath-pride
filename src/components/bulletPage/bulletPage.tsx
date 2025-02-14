@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Image } from '@components/image';
+import { NewsImage } from '@components/image';
 import { NewsTitle } from '@components/newsTitle';
 import { RenderText } from '@components/renderText';
 
@@ -42,7 +42,7 @@ export const BulletPage: React.FC<IBulletPageProps> = ({
             <NewsTitle className={styles.header} date={date} title={title} />
           )}
           {images[index] && (
-            <Image
+            <NewsImage
               className={classNames(styles.image)}
               dataLine={images[index]}
               cssVar={{ '--grid-row': String(index + 2) }}

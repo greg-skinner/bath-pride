@@ -9,12 +9,13 @@ export const Page: React.FC = () => (
   <div>
     <div className={styles.content}>
       <Carousel />
-      <div className={styles.headline}>Bath Pride is finally here!</div>
+      <div className={styles.headline}>We did it!</div>
       <div className={styles.text}>
-        Bath Pride is finally coming to Bath as its own distinct event. With the
-        local community we are trying to build a pride that is long-lasting and
-        represents the entire queer community. Together, with you, we are going
-        to make a pride we can all be proud of.
+        We can&apos;t believe the outpouring of support you all brought to Bath
+        Pride 2024! We&apos;re taking some time to recuperate, but will be back
+        soon to build a pride that is long-lasting and represents the entire
+        queer community. Together, with you, we are going to make a pride we can
+        all be proud of.
       </div>
       <div className={styles.hashtag}>#BathPride</div>
       <div className={styles.embed}>
@@ -30,6 +31,6 @@ export const Page: React.FC = () => (
 
 export const documentProps = {
   description:
-    'Bath Pride is finally coming to Bath as its own distinct event. Together, with you, we are going to make a pride we can all be proud of.',
-  img: 'carousel/stay-tuned.jpg',
+    "We can't believe the outpouring of support you all brought to Bath Pride 2024!",
+  img: 'images/2024/holburne.jpg',
 };

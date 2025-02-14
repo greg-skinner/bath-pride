@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { Link } from '@components/link/link';
+import { Socials } from '@components/socials';
 import { PageContextState } from '@renderer/context';
 import { IMenuLink, menuKeys, news, newsSlug } from '@utils';
 
@@ -81,6 +82,27 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
           {closeFunc && <button onClick={closeFunc}>🞫</button>}
         </div>
         {menuKeys(urlPathname.split('/')[1]).map(render)}
+        <div className={styles.spacer} />
+        <div className={styles.outbound}>
+          <Socials className={styles.socials} landscape />
+          <div className={styles.donate}>
+            <em>Donate</em>
+            <Link
+              className={styles.link}
+              href={'https://www.paypal.com/gb/fundraiser/charity/5069290'}
+              aria={'Our PayPal donation link'}
+            >
+              PayPal
+            </Link>
+            <Link
+              className={styles.link}
+              href={'https://pay.sumup.com/b2c/QC5QJJED'}
+              aria={'Our SumUp donation link'}
+            >
+              SumUp
+            </Link>
+          </div>
+        </div>
       </div>
     );
   }

@@ -24,5 +24,5 @@ export const documentProps = {
   title: 'Support us',
   description:
     'Bath Pride can only operate with the support from our local community. If you are able to, we would appreciate your time or money to help us make Bath a more inclusive and welcoming city for the LGBT+ community.',
-  img: 'carousel/stay-tuned.jpg',
+  img: 'images/2024/holburne.jpg',
 };

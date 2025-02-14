@@ -1,7 +1,0 @@
-@use '@theme/mixins.scss';
-@use '@theme/theme.scss';
-
-.content {
-  margin: theme.$spacing-small;
-  grid-template-columns: 1fr;
-}

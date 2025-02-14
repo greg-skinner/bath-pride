@@ -33,6 +33,9 @@ export const news = Object.values(newsImport)
 
 export const newsSlug = (article: IArticle) => article.date;
 
+export const newsHeaderImage = (article: IArticle) =>
+  article.content.filter((art) => art[0] === '@')[0];
+
 const sortOrder = [
   'bath-pride-2024',
   'news',

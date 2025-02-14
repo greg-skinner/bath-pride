@@ -1,0 +1,17 @@
+@use '@theme/theme.scss';
+@use '@theme/mixins.scss';
+
+.page {
+  padding: theme.$spacing-small;
+}
+
+.carousel {
+  @include mixins.mobile {
+    max-height: unset;
+  }
+}
+
+.terms-header {
+  margin-top: theme.$spacing-padding;
+  font-weight: theme.$extra-bold;
+}

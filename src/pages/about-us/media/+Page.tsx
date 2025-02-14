@@ -23,5 +23,5 @@ export const Page: React.FC = () => (
 export const documentProps = {
   title: 'Press and Media',
   description: 'Press and Media kit for Bath Pride.',
-  img: 'carousel/stay-tuned.jpg',
+  img: 'images/2024/holburne.jpg',
 };
