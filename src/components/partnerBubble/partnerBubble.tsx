@@ -12,6 +12,7 @@ export interface IPartnerBubbleProps {
   link: string;
   className?: string;
   aria: string;
+  folder?: string;
 }
 
 export const PartnerBubble: React.FC<IPartnerBubbleProps> = ({
@@ -21,6 +22,7 @@ export const PartnerBubble: React.FC<IPartnerBubbleProps> = ({
   title,
   link,
   aria,
+  folder = 'images',
 }) => (
   <a
     aria-label={aria}
@@ -32,7 +34,7 @@ export const PartnerBubble: React.FC<IPartnerBubbleProps> = ({
       className={styles.image}
       cssVar={{}}
       dataLine={img}
-      folder={'images'}
+      folder={folder}
     />
     <div className={styles.title}>{title}</div>
   </a>
