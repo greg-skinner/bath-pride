@@ -16,7 +16,7 @@ export const Page: React.FC = () => (
       className={styles.image}
       folder={'images/2024'}
       file={'holburne.jpg'}
-      caption={''}
+      caption={'Credit: Mitch Williams'}
       alt={'The crowd outside the Holburne museum with various pride flags'}
     />
     <div className={styles.copy}>
@@ -32,7 +32,7 @@ export const Page: React.FC = () => (
       className={styles.image}
       folder={'images/2024'}
       file={'march.png'}
-      caption={''}
+      caption={'Credit: Ben Herring'}
       alt={'A view of the march as it headed back up Great Pultney Street'}
     />
     <div className={styles.copy}>
@@ -47,7 +47,7 @@ export const Page: React.FC = () => (
       className={styles.image}
       folder={'images/2024'}
       file={'picnic.jpg'}
-      caption={''}
+      caption={'Credit: Greg Skinner'}
       alt={
         'A view of the back of the Holburne Museum showing some of the picnic attendees and stalls'
       }
