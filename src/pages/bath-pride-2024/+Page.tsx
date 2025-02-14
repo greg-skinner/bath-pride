@@ -57,5 +57,7 @@ export const Page: React.FC = () => (
 
 export const documentProps = {
   title: 'Bath Pride 2024',
-  description: 'Events',
+  description:
+    'What a day! Three times as many people as we expected arrived on the day to the picnic and the march, and we were blown away by the support everyone showed to this first event.',
+  img: 'images/2024/holburne.jpg',
 };

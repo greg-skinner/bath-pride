@@ -27,7 +27,7 @@ export const Page: React.FC = () => (
 
 export const documentProps = {
   title: 'News',
-  description: '',
+  description: 'News and updates from Bath Pride.',
 };
 
 export const onBeforePrerenderStart = () =>

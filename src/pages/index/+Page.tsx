@@ -31,6 +31,6 @@ export const Page: React.FC = () => (
 
 export const documentProps = {
   description:
-    'Bath Pride is finally coming to Bath as its own distinct event. Together, with you, we are going to make a pride we can all be proud of.',
+    "We can't believe the outpouring of support you all brought to Bath Pride 2024!",
   img: 'images/2024/holburne.jpg',
 };
