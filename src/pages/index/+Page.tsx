@@ -11,11 +11,11 @@ export const Page: React.FC = () => (
       <Carousel />
       <div className={styles.headline}>We did it!</div>
       <div className={styles.text}>
-        We can't believe the outpouring of support you all brought to Bath Pride
-        2024! We're taking some time to recuperate, but will be back soon to
-        build a pride that is long-lasting and represents the entire queer
-        community. Together, with you, we are going to make a pride we can all
-        be proud of.
+        We can&apos;t believe the outpouring of support you all brought to Bath
+        Pride 2024! We&apos;re taking some time to recuperate, but will be back
+        soon to build a pride that is long-lasting and represents the entire
+        queer community. Together, with you, we are going to make a pride we can
+        all be proud of.
       </div>
       <div className={styles.hashtag}>#BathPride</div>
       <div className={styles.embed}>

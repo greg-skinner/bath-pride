@@ -39,7 +39,9 @@ export const NewsImage: React.FC<INewsImageProps> = ({
   dataLine,
   folder,
 }) => {
-  let file, caption, alt;
+  let file;
+  let caption;
+  let alt;
   try {
     const regex = dataLine.match(/@(.*?):(.*?):(.*)/);
     if (regex !== null) {
@@ -49,6 +51,7 @@ export const NewsImage: React.FC<INewsImageProps> = ({
     file = 'bath-pride-logo_stone.png';
     alt = 'The Bath Pride Logo';
     caption = '';
+    // eslint-disable-next-line no-param-reassign -- fallback in catch
     folder = 'images';
   }
 

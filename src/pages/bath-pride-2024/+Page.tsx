@@ -25,8 +25,8 @@ export const Page: React.FC = () => (
       massive thank you to all of the volunteer marshals who helped keep
       everyone safe, and thank yous to all the groups who came together to
       represent their communities, as well as everyone who joined as
-      individuals. Particular thanks to the Ambulance service, who's ambulance
-      brought up the rear of the march in style.
+      individuals. Particular thanks to the Ambulance service, who&apos;s
+      ambulance brought up the rear of the march in style.
     </div>
     <Image
       className={styles.image}
