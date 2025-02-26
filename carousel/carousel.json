@@ -3,7 +3,13 @@
     "file": "carousel/pride-2024.png",
     "alt": "Bath Pride 2024!",
     "action": "bath-pride-2024",
-    "aria": "Bath Pride 2024 page"
+    "aria": "Link to our Bath Pride 2024 page"
+  },
+  {
+    "file": "carousel/Awards logo 2025.png",
+    "alt": "Vote for use for the ShoutOut Awards 2025",
+    "action": "news/2025-02-23",
+    "aria": "Link to article ShoutOut Awards news article"
   },
   {
     "file": "carousel/donate.jpg",
@@ -15,6 +21,6 @@
     "file": "carousel/socials.jpg",
     "alt": "Follow us on Instagram @Bath.pride",
     "action": "https://www.instagram.com/bath.pride/",
-    "aria": "Bath Pride Instagram "
+    "aria": "Link to Bath Pride Instagram "
   }
 ]
