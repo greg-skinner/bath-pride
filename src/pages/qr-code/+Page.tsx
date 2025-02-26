@@ -5,5 +5,5 @@ export const Page: React.FC = () => null;
 export const documentProps: IMetaData = {
   title: 'Redirecting...',
   redirectUrl:
-    'https://docs.google.com/forms/d/e/1FAIpQLScN3Ryi2itEa0G8h2jV74fvd-EmNxkWem2GNtI34AYh7J7TjA/viewform',
+    'https://docs.google.com/forms/d/17N8ghs6BT4ELPMZKoV2unyo-Cdp1Qt_4Yz0CJ-ajY0E/viewform',
 };
