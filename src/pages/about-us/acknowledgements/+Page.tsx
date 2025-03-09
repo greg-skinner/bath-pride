@@ -3,9 +3,11 @@ import * as React from 'react';
 import styles from './index.module.scss';
 
 export const Page: React.FC = () => (
-  <div>
+  <div className={styles.acknowledgements}>
     <div className={styles.header}>Acknowledgements</div>
-    <div>We are deeply indebted to Sophie Tyler who developed the brand style for Bath Pride.</div>
+    <div>
+      Many thanks to Sophie Tyler who developed the brand style for Bath Pride.
+    </div>
     <div>Thanks to Greg Skinner, who built and maintains the website.</div>
     <div>
       Some icons on this website are by{' '}
