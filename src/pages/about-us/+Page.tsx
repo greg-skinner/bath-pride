@@ -66,37 +66,6 @@ export const Page: React.FC = () => (
       , we have a selection of marketing assets, images for colour and logos
       available for use.
     </div>
-    <div className={styles.header}>Acknowledgements</div>
-    <div>
-      Some icons on this website are by{' '}
-      <a
-        aria-label="Smashicons icon attribution"
-        target="_blank"
-        rel="noreferrer"
-        href="https://www.freepik.com/icon/guide-dog_1512681"
-      >
-        Smashicons
-      </a>
-      ,{' '}
-      <a
-        aria-label="Hadi Davodpour icon attribution"
-        target="_blank"
-        rel="noreferrer"
-        href="https://thenounproject.com/icon/hearing-loop-28162/"
-      >
-        Hadi Davodpour from Noun Project
-      </a>{' '}
-      and{' '}
-      <a
-        aria-label="uxwing icon attribution"
-        target="_blank"
-        rel="noreferrer"
-        href="https://uxwing.com/"
-      >
-        uxwing
-      </a>
-      , and are used under Creative Commons licenses.
-    </div>
   </div>
 );
 

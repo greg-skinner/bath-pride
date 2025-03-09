@@ -1,0 +1,8 @@
+@use '@theme/theme.scss';
+@use '@theme/mixins.scss';
+
+.header {
+  font-weight: theme.$extra-bold;
+  margin-top: theme.$spacing-large;
+  margin-bottom: theme.$spacing-large;
+}
