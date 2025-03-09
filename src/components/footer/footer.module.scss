@@ -3,18 +3,29 @@
 
 .footer {
   background: theme.$stone;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
   justify-content: space-between;
   align-items: center;
   padding: theme.$spacing-smaller;
   font-size: theme.$font-smaller;
 
-  .socials {
-    grid-area: hamburger;
+  .msg {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
 
-    @include mixins.desktop {
-      display: none;
+  .smaller {
+    font-size: theme.$font-smallest;
+  }
+
+  @include mixins.desktop {
+    grid-template-columns: 1fr;
+
+    .spacer,
+    .socials {
+        display: none;
     }
   }
 }
