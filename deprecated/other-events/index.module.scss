@@ -1,5 +1,5 @@
-@use '@theme/mixins.scss';
-@use '@theme/theme.scss';
+@use '@theme/mixins';
+@use '@theme/theme';
 
 .page {
   padding: theme.$spacing-small;

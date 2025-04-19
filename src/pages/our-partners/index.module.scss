@@ -1,5 +1,5 @@
-@use '@theme/mixins.scss';
-@use '@theme/theme.scss';
+@use '@theme/mixins';
+@use '@theme/theme';
 
 .title {
   font-size: theme.$font-header;

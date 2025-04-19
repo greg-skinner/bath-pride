@@ -3,20 +3,19 @@
 @use 'sass:map';
 
 .carousel {
-  @include mixins.banner;
-
   --swiper-navigation-top-offset: 45%;
   --swiper-theme-color: #fff;
   --swiper-pagination-bottom: 0px;
   --swiper-pagination-color: #f0e7df;
+  height: 100%;
+  overflow: hidden;
+
+  @include mixins.banner;
 
   @include mixins.mobile {
     --swiper-navigation-top-offset: 50%;
     --swiper-pagination-bottom: 0px;
   }
-
-  height: 100%;
-  overflow: hidden;
 
   .carousel-page {
     width: 100%;
