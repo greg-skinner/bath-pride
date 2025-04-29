@@ -189,6 +189,6 @@ export const Page: React.FC = () => (
 export const documentProps = {
   title: 'Governance',
   description:
-    'Bath Pride is a registered charity and we exist to undertake our charitable objects. This page contains what our purpose is, ourconstitution, and our policies.',
+    'Bath Pride is a registered charity and we exist to undertake our charitable objects. This page contains what our purpose is, our constitution, and our policies.',
   img: 'images/2024/holburne.jpg',
 };
