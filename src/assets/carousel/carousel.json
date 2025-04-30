@@ -6,12 +6,6 @@
     "aria": "Link to our Bath Pride 2024 page"
   },
   {
-    "file": "carousel/Awards logo 2025.png",
-    "alt": "Vote for use for the ShoutOut Awards 2025",
-    "action": "news/2025-02-23",
-    "aria": "Link to article ShoutOut Awards news article"
-  },
-  {
     "file": "carousel/donate.jpg",
     "alt": "Donate to Bath Pride",
     "action": "https://www.paypal.com/gb/fundraiser/charity/5069290",
