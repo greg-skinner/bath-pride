@@ -1,0 +1,16 @@
+@use '@theme/theme.scss';
+@use '@theme/mixins.scss';
+
+.acknowledgements {
+  > div {
+    margin-bottom: theme.$spacing-large;
+  }
+
+  .header {
+    font-weight: theme.$extra-bold;
+  }
+
+  @include mixins.mobile {
+    padding: theme.$spacing-small;
+  }
+}
