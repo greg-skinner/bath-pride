@@ -4,11 +4,15 @@
 .footer {
   background: theme.$stone;
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
   justify-content: space-between;
   align-items: center;
   padding: theme.$spacing-smaller;
   font-size: theme.$font-smaller;
+
+  .links {
+    text-align: center;
+  }
 
   .msg {
     align-items: center;
@@ -25,7 +29,7 @@
 
     .spacer,
     .socials {
-        display: none;
+      display: none;
     }
   }
 }

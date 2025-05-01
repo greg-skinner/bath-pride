@@ -9,4 +9,8 @@
   .header {
     font-weight: theme.$extra-bold;
   }
+
+  @include mixins.mobile {
+    padding: theme.$spacing-small;
+  }
 }

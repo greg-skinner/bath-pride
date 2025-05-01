@@ -16,7 +16,7 @@ export const Footer: React.FC<IFooterProps> = ({ className }) => (
     <div className={styles.spacer} />
     <div className={styles.msg}>
       <strong>Bath Pride</strong>
-      <div>
+      <div className={styles.links}>
         <Link href="about-us/media" aria="Our press kit">
           Press kit
         </Link>
