@@ -57,10 +57,12 @@ export const getDocumentProps = (pageProps: PageProps): IMetaData => ({
   description: flattenText(
     pageProps.article?.content.filter((item) => item[0] !== '@')[0]
   ),
-  img: `news/${pageProps.article?.content
-    .filter((item) => item[0] === '@')[0]
-    ?.slice(1)
-    .split(':')[0]}`,
+  img: `news/${
+    pageProps.article?.content
+      .filter((item) => item[0] === '@')[0]
+      ?.slice(1)
+      .split(':')[0]
+  }`,
   alt: pageProps.article?.content
     .filter((item) => item[0] === '@')[0]
     ?.slice(1)

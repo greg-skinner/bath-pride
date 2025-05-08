@@ -79,10 +79,7 @@ export const menuKeys = (local?: string): IMenuLink[] => {
     .filter((key) => key.search('@') < 0)
     .filter((key) => key.search('_') < 0)
     .filter((key) => key.search('qr-code') < 0)
-    .sort((a, b) =>
-      // eslint-disable-next-line no-nested-ternary -- sort logic
-      a === '/' ? -1 : b === '/' ? 1 : menuSort(a, b)
-    )
+    .sort((a, b) => (a === '/' ? -1 : b === '/' ? 1 : menuSort(a, b)))
     .forEach((page) => {
       if (page.indexOf('/') <= 1) {
         const link = makeMenuLink(page);
