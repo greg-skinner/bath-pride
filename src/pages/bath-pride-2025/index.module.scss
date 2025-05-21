@@ -1,0 +1,36 @@
+@use '@theme/mixins.scss';
+@use '@theme/theme.scss';
+
+.title {
+  font-size: theme.$font-very-large;
+  font-weight: theme.$extra-bold;
+}
+
+.copy {
+  font-size: theme.$font-header;
+  text-align: justify;
+  margin-top: theme.$spacing-small;
+}
+
+.image {
+  margin-top: theme.$spacing-small;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mixins.desktop {
+    .event {
+      width: 90%;
+    }
+  }
+}
+
+.page {
+  padding: theme.$spacing-small;
+}
