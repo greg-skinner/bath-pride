@@ -21,13 +21,13 @@ export const Socials: React.FC<ISocialsProps> = ({ className, landscape }) => (
       rel="noreferrer"
       href="https://www.instagram.com/bath.pride/"
     />
-    <a
+    {/* <a
       aria-label="Bath Pride Facebook"
       className={classNames(styles.link, styles.facebook)}
       target="_blank"
       rel="noreferrer"
       href="https://www.facebook.com/BathPride"
-    />
+    /> */}
     {/* <a
       aria-label="Bath Pride X"
       className={classNames(styles.link, styles.twitter)}
