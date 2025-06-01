@@ -37,6 +37,7 @@ export const newsHeaderImage = (article: IArticle) =>
   article.content.filter((art) => art[0] === '@')[0];
 
 const sortOrder = [
+  'bath-pride-2025',
   'bath-pride-2024',
   'news',
   'our-partners',

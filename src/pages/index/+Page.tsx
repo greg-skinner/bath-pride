@@ -4,18 +4,19 @@ import { InstagramEmbed } from 'react-social-media-embed';
 import { Carousel } from '@components/carousel';
 
 import styles from './index.module.scss';
+import { Link } from '@components/link/link';
 
 export const Page: React.FC = () => (
   <div>
     <div className={styles.content}>
       <Carousel />
-      <div className={styles.headline}>We did it!</div>
+      <div className={styles.headline}>Bath Pride 2025 is coming!</div>
       <div className={styles.text}>
-        We can&apos;t believe the outpouring of support you all brought to Bath
-        Pride 2024! We&apos;re taking some time to recuperate, but will be back
-        soon to build a pride that is long-lasting and represents the entire
-        queer community. Together, with you, we are going to make a pride we can
-        all be proud of.
+        After the amazing success of last year, we will be back this summer for{' '}
+        <Link href="bath-pride-2025" aria="Bath Pride 2025 page">
+          Bath Pride 2025
+        </Link>
+        !
       </div>
       <div className={styles.hashtag}>#BathPride</div>
       <div className={styles.embed}>

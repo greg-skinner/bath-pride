@@ -41,9 +41,8 @@ export const Page: React.FC = () => (
       Our Values
     </Link>
     <div>
-      Everything we do is guided by our values: Affirming, Transparent, Justice,
-      Grassroots, Vibrant, and Safe. Find out how we define our values in
-      practice.
+      Everything we do is guided by our values: Affirming, Justice, Grassroots,
+      Vibrant, and Safe. Find out how we define our values in practice.
     </div>
     <br />
     <div className={styles.leading}>
