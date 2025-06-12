@@ -22,13 +22,6 @@ export const Page: React.FC = () => (
     <div className={styles.partners}>
       <PartnerBubble
         accent={1}
-        img={"@logos/Botanica-Studio.png::Botanica's logo"}
-        title={'Botanica Studio'}
-        link={'https://www.botanicastudio.co.uk/'}
-        aria="Botanica Studio's website"
-      />
-      <PartnerBubble
-        accent={2}
         img={"@logos/minuteman.png::Minuteman's logo"}
         title={'Minuteman Press'}
         link={'https://minutemanbath.co.uk/'}
