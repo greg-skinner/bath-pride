@@ -79,6 +79,10 @@
   .donate {
     text-align: right;
 
+    @include mixins.desktop {
+      margin: -1rem 0;
+    }
+
     .link {
       display: block;
     }

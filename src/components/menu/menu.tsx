@@ -32,6 +32,7 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
               >
                 {news
                   .filter((item) => item.type !== 'press-release')
+                  .filter((item) => !item.archived)
                   .map((article) => (
                     <Link
                       aria={article.title}
@@ -100,6 +101,13 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
               aria={'Our SumUp donation link'}
             >
               SumUp
+            </Link>
+            <Link
+              className={styles.link}
+              href={'https://gofund.me/1f5b5229'}
+              aria={'Our GoFundMe donation link'}
+            >
+              GoFundMe
             </Link>
           </div>
         </div>
