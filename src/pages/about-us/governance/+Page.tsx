@@ -33,22 +33,22 @@ export const Page: React.FC = () => (
     <ol type="a">
       <li>
         Organising and promoting events throughout the year to celebrate the
-        LGBT+ community and raise awareness of discrimination and other issues
-        affecting the LGBT+ community and the advancement of LGBT+ rights;
+        LGBTQ+ community and raise awareness of discrimination and other issues
+        affecting the LGBTQ+ community and the advancement of LGBTQ+ rights;
       </li>
       <li>
-        Organising an annual festival celebrating the LGBT+ community and
-        providing a space for discussion and advancement of LGBT+ rights;
+        Organising an annual festival celebrating the LGBTQ+ community and
+        providing a space for discussion and advancement of LGBTQ+ rights;
       </li>
       <li>
-        Raising awareness with the public of the LGBT+ experience, in particular
-        the aspects of discrimination and the difficulties faced by LGBT+
-        people;
+        Raising awareness with the public of the LGBTQ+ experience, in
+        particular the aspects of discrimination and the difficulties faced by
+        LGBTQ+ people;
       </li>
       <li>
         Associating with other organisations, including but not limited to
         government, charities, public and private organisations, and
-        volunteering organisations, as appropriate for the advancement of LGBT+
+        volunteering organisations, as appropriate for the advancement of LGBTQ+
         equality;
       </li>
       <li>
@@ -96,7 +96,7 @@ export const Page: React.FC = () => (
         ensure effective administration of Bath Pride, such as creating risk
         assessments, project plans, and budget plans,
       </li>
-      <li>connect and engage with the LGBT+ community,</li>
+      <li>connect and engage with the LGBTQ+ community,</li>
       <li>provide support to the Board of Trustees,</li>
     </ul>
     <div>

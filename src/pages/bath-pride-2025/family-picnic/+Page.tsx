@@ -14,9 +14,9 @@ export const Page: React.FC = () => (
   <div className={styles.page}>
     <EventTitle
       title={'Family Picnic'}
-      date={new Date('2024-08-18')}
-      time={[new Date('2024-08-18T12:00'), new Date('2024-08-18T17:00')]}
-      location={'Holburne Museum'}
+      date={new Date('2025-07-26')}
+      time={[new Date('2025-07-26T11:00'), new Date('2025-07-26T17:00')]}
+      location={'Sydney Gardens and the Holburne Museum'}
       description={
         'A chance to sit, relax and listen to some live local music.'
       }
@@ -50,7 +50,7 @@ export const Page: React.FC = () => (
 );
 
 export const documentProps = {
-  title: '2024 Family Picnic',
+  title: '2025 Family Picnic',
   description: 'A chance to sit, relax and listen to some live local music.',
   img: 'images/The_Holburne_Museum.jpg',
 };
