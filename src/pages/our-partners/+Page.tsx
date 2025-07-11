@@ -51,6 +51,13 @@ export const Page: React.FC = () => (
         link={'https://www.onefivetattoo.co.uk/'}
         aria="One Five Tattoo's website"
       />
+      <PartnerBubble
+        accent={5}
+        img={"@logos/DD_logo.gif::Different Dynamics' logo"}
+        title={'Different Dynamics'}
+        link={'http://differentdynamics.com/'}
+        aria="Different Dynamics' website"
+      />
     </div>
   </div>
 );
