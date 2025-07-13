@@ -33,7 +33,7 @@ export const Page: React.FC = () => (
       folder={'images/2024'}
       file={'march.png'}
       caption={'Credit: Ben Herring'}
-      alt={'A view of the march as it headed back up Great Pultney Street'}
+      alt={'A view of the march as it headed back up Great Pulteney Street'}
     />
     <div className={styles.copy}>
       Thank you so much to everyone who attended the picnic - stallholders and

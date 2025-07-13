@@ -7,22 +7,20 @@ import { EventTitle } from '@components/eventTitle';
 import { StandardPage } from '@components/standardPage';
 
 import _content from './march.json';
-import _preMarch from './preMarch.json';
 import _terms from './terms.json';
 
 import styles from './index.module.scss';
 
 const content: string[] = _content;
-const preMarch: string[] = _preMarch;
 const terms: string[] = _terms;
 
 export const Page: React.FC = () => (
   <div className={styles.page}>
     <EventTitle
       title={'Pride march'}
-      date={new Date('2024-08-18')}
-      time={[new Date('2024-08-18T13:00'), new Date('2024-08-18T14:00')]}
-      location={'starting in William Street'}
+      date={new Date('2025-07-26')}
+      time={[new Date('2025-07-26T12:00'), new Date('2025-07-26T13:00')]}
+      location={'starting in Sydney Gardens'}
       description={'Pride March through the city, pride is a protest!'}
       aria=""
     />
@@ -43,14 +41,12 @@ export const Page: React.FC = () => (
       }}
     />
     <MarchCarousel className={styles.carousel} />
-    <BulletPage content={preMarch} date={''} title={''} />
-    <MarchCarousel className={styles.carousel} preMarch />
     <div className={styles.termsHeader}>Terms and conditions</div>
     <BulletPage content={terms} date={''} title={''} />
   </div>
 );
 
 export const documentProps = {
-  title: '2024 Pride March',
+  title: '2025 Pride March',
   description: 'Pride March through the city, pride is a protest!',
 };
