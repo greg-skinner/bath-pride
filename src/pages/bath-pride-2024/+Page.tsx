@@ -46,8 +46,8 @@ export const Page: React.FC = () => (
     <Image
       className={styles.image}
       folder={'images/2024'}
-      file={'picnic.jpg'}
-      caption={'Credit: Greg Skinner'}
+      file={'picnic-2.jpg'}
+      caption={'Credit: Ben Herring'}
       alt={
         'A view of the back of the Holburne Museum showing some of the picnic attendees and stalls'
       }
