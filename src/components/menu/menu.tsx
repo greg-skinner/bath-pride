@@ -104,10 +104,10 @@ export const Menu = React.forwardRef<HTMLDivElement, IMenuProps>(
             </Link>
             <Link
               className={styles.link}
-              href={'https://gofund.me/1f5b5229'}
-              aria={'Our GoFundMe donation link'}
+              href={'https://www.giveasyoulive.com/charity/bath-pride'}
+              aria={'Our Give As You Live donation link'}
             >
-              GoFundMe
+              Give As You Live
             </Link>
           </div>
         </div>
