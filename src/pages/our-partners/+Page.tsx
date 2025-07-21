@@ -58,6 +58,13 @@ export const Page: React.FC = () => (
         link={'http://differentdynamics.com/'}
         aria="Different Dynamics' website"
       />
+      <PartnerBubble
+        accent={6}
+        img={"@../news/bathsoundlogo.jpg::Bath Sound's logo"}
+        title={'Bath Sound'}
+        link={'https://www.bathsound.radio/'}
+        aria="bath Sound's website"
+      />
     </div>
   </div>
 );
