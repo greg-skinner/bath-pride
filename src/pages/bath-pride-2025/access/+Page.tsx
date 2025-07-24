@@ -5,12 +5,14 @@ import { StandardPage } from '@components/standardPage';
 import _content from './access.json';
 
 import styles from './index.module.scss';
+import { AccessCarousel, MarchCarousel } from '@components/carousel';
 
 const content: string[] = _content;
 
 export const Page: React.FC = () => (
   <div className={styles.page}>
-    <StandardPage folder={'images'} content={content} date={''} title={''} />
+    <AccessCarousel />
+    <MarchCarousel />
   </div>
 );
 
